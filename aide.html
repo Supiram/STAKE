@@ -62,6 +62,12 @@
          padding-right: 0 !important;
          padding-left: 0 !important;
       }
+
+      .btnRedirection {
+         background-color: transparent;
+         border-radius: 5px;
+         border-color: white;
+      }
    </style>
 </head>
 
@@ -101,7 +107,7 @@
       </li>
 
       <li class="container btnContainer">
-         <div class="row collapsible-header titreCollapse">
+         <div class="row collapsible-header titreCollapse" id="btnInscription">
             <div class="col s2">
                <img src="inscription.svg" class="imgLeft">
             </div>
@@ -126,7 +132,8 @@
 
                Vérifiez votre adresse e-mail en cliquant sur le lien de confirmation envoyé par Stake.<br><br>
 
-               Et voilà ! Votre compte est créé, pour savoir comment déposer c'est par ici :
+               Bonne chance ! Si vous souhaitez profitez d'un bonus 30€ ou 200%, il suffit de retourner au menu
+               principal et de cliquer sur "Accéder aux bonus"
             </p>
          </div>
       </li>
@@ -144,12 +151,14 @@
             <p><u>Étape 1 : Accéder à votre compte</u><br><br>
 
                Connectez-vous à votre compte en utilisant vos identifiants (adresse e-mail et mot de passe). Si vous
-               n'avez pas de compte voici un tutoriel pour en créer un : <a href="#tutorielInscription">Tutoriel</a><br>
+               n'avez pas de compte voici un tutoriel pour en créer un : <button class="btnRedirection" href=""
+                  onclick="clickButton()">Tutoriel</button><br>
                Une fois connecté, cliquez sur "Portefeuille" en haut au centre de votre écran.<br><br>
 
                <u>Étape 2 : Choisir la méthode de dépôt</u><br><br>
 
-               Sur la page de dépôt, vous verrez différentes options pour déposer des fonds. Sélectionnez la méthode de
+               Sur la page de dépôt, vous verrez différentes options pour déposer des fonds. Sélectionnez la méthode
+               de
                dépôt qui vous convient le mieux.
                Si vous optez pour une cryptomonnaie, copiez l'adresse de dépôt ou scannez le code QR fourni par
                Stake.com et transférez les fonds depuis votre portefeuille de cryptomonnaie.
@@ -217,6 +226,15 @@
          </div>
       </li>
    </ul>
+
+   <script type="text/javascript">
+
+      // Simulate click function
+      function clickButton() {
+         document.getElementById("btnInscription").click();
+      }
+
+   </script>
 
 </body>
 
