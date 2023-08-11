@@ -118,10 +118,11 @@
          <div style="background-color:#101B22" class="collapsible-body text" id="tutorielInscription">
             <p><u>Étape 1 :</u><br><br>
 
-               Rendez vous sur le lien suivant : <a href="" onclick="ouvreLienAffi()">Stake.bet</a> puis cliquez sur
-               le
-               bouton
-               "S'inscrire" ou "Créer un compte".<br><br>
+               Rendez vous sur un des liens suivant : <br>
+               ADEL-ATP : <a href="" onclick="ouvreLienAffi(ADELATP)">Stake.bet</a><br>
+               CASISHOW : <a href="" onclick="ouvreLienAffi(CASISHOW)">Stake.bet</a><br>
+               INSTANT : <a href="" onclick="ouvreLienAffi(INSTANT)">Stake.bet</a><br>
+               puis cliquez sur le bouton "S'inscrire" ou "Créer un compte".<br><br>
 
                <u>Étape 2 :</u><br><br>
 
@@ -234,8 +235,15 @@
          document.getElementById("btnInscription").click();
       }
 
-      function ouvreLienAffi() {
-         window.open("https://stake.bet/?c=5cc2cb21")
+      function ouvreLienAffi(nom) {
+         if (nom = "ADELATP") {
+            window.open("https://stake.bet/?c=ce05b3d553")
+         } else if (nom = "CASISHOW") {
+            window.open("https://stake.bet/?c=4f55332a")
+         } else {
+            window.open("https://stake.bet/?c=0Kkr3Qyt")
+         }
+
       }
 
    </script>
