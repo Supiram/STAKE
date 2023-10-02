@@ -76,7 +76,7 @@
       <h5 class="center-align" style="margin:0"><img src="aide.png" style="width: 360;"></h5>
    </div>
    <ul class="collapsible" style="margin-top:-4px;border:unset !important;box-shadow: none !important;">
-      <li class="container btnContainer">
+      <li id="VPN" class="container btnContainer">
          <div class="row collapsible-header titreCollapse">
             <div class="col s2">
                <img src="VPN.svg" class="imgLeft">
@@ -228,6 +228,25 @@
    </ul>
 
    <script type="text/javascript">
+
+      // Fonction pour obtenir les paramètres de l'URL
+      function obtenirParametreUrl(nom) {
+         nom = nom.replace(/[[]/, '\\[').replace(/[\]]/, '\\]');
+         var regex = new RegExp('[\\?&]' + nom + '=([^&#]*)');
+         var résultats = regex.exec(location.search);
+         return résultats === null ? '' : decodeURIComponent(résultats[1].replace(/\+/g, ' '));
+      }
+
+      // Obtenez la valeur du paramètre nommé "afficherBouton" dans l'URL
+      var afficherBouton = obtenirParametreUrl('VPN');
+
+      // Sélectionnez le bouton par son ID
+      var bouton = document.getElementById('VPN');
+
+      // Vérifiez la valeur du paramètre "afficherBouton" et affichez ou masquez le bouton en conséquence
+      if (afficherBouton === 'false') {
+         bouton.style.display = 'none'; // Masquer le bouton
+      }
 
       // Simulate click function
       function clickButton() {
