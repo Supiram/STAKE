@@ -1,26 +1,26 @@
+<!DOCTYPE html>
 <html>
 
 <head>
    <title>The Materialize Collapsible Example</title>
    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-   <link rel=" stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
-   </script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
 
    <style>
       .titreCollapse {
          background-color: #1B2B38;
          background-image: url("fond_btn.svg");
          background-repeat: no-repeat;
-         margin: 4;
+         margin: 4px;
          border-bottom: unset !important;
          color: white;
          background-position: center;
          height: 60px;
          padding-top: 8px;
-         margin-bottom: 8;
+         margin-bottom: 8px;
       }
 
       li {
@@ -48,12 +48,12 @@
       }
 
       .btnContainer {
-         max-width: 360;
-         min-width: 360;
+         max-width: 360px;
+         min-width: 360px;
       }
 
       .imgLeft {
-         margin-top: 3;
+         margin-top: 3px;
          text-align: center;
          float: right;
       }
@@ -73,10 +73,10 @@
 
 <body style="background-color:#1B2B38">
    <div>
-      <h5 class="center-align" style="margin:0"><img src="aide.png" style="width: 360;"></h5>
+      <h5 class="center-align" style="margin:0"><img src="aide.png" style="width: 360px;"></h5>
    </div>
    <ul class="collapsible" style="margin-top:-4px;border:unset !important;box-shadow: none !important;">
-      <li class="container btnContainer">
+      <li class="container btnContainer" id="vpnItem">
          <div class="row collapsible-header titreCollapse">
             <div class="col s2">
                <img src="VPN.svg" class="imgLeft">
@@ -106,7 +106,7 @@
          </div>
       </li>
 
-      <li class="container btnContainer">
+      <li class="container btnContainer" id="inscriptionItem">
          <div class="row collapsible-header titreCollapse" id="btnInscription">
             <div class="col s2">
                <img src="inscription.svg" class="imgLeft">
@@ -132,13 +132,13 @@
 
                Vérifiez votre adresse e-mail en cliquant sur le lien de confirmation envoyé par Stake.<br><br>
 
-               Bonne chance ! Si vous souhaitez profitez d'un bonus 30€ ou Bonus x3, il suffit de retourner au menu
+               Bonne chance ! Si vous souhaitez profitez d'un bonus 30€ ou 200%, il suffit de retourner au menu
                principal et de cliquer sur "Accéder aux bonus"
             </p>
          </div>
       </li>
 
-      <li class="container btnContainer">
+      <li class="container btnContainer" id="depotItem">
          <div class="row collapsible-header titreCollapse">
             <div class="col s2">
                <img src="deposit.svg" class="imgLeft">
@@ -175,12 +175,12 @@
                Et voilà ! Vous avez maintenant appris comment déposer des fonds sur Stake.com en 3 étapes
                simples.<br><br>
 
-               Bonne chance ! Si vous souhaitez profitez d'un bonus 30€ ou Bonus x3 c'est par ici :
+               Bonne chance ! Si vous souhaitez profitez d'un bonus 30€ ou 200% c'est par ici :
             </p>
          </div>
       </li>
 
-      <li class="container btnContainer">
+      <li class="container btnContainer" id="retraitItem">
          <div class="row collapsible-header titreCollapse">
             <div class="col s2">
                <img src="retirer.svg" class="imgLeft">
@@ -228,7 +228,6 @@
    </ul>
 
    <script type="text/javascript">
-
       // Simulate click function
       function clickButton() {
          document.getElementById("btnInscription").click();
@@ -238,6 +237,21 @@
          window.open("https://stake.bet/?c=YSl0QZqo")
       }
 
+      // Detect URL parameter and simulate click on the corresponding item
+      window.onload = function () {
+         const urlParams = new URLSearchParams(window.location.search);
+         const item = urlParams.get('item');
+
+         if (item === 'vpn') {
+            document.getElementById('vpnItem').querySelector('.collapsible-header').click();
+         } else if (item === 'inscription') {
+            document.getElementById('inscriptionItem').querySelector('.collapsible-header').click();
+         } else if (item === 'depot') {
+            document.getElementById('depotItem').querySelector('.collapsible-header').click();
+         } else if (item === 'retrait') {
+            document.getElementById('retraitItem').querySelector('.collapsible-header').click();
+         }
+      }
    </script>
 
 </body>
