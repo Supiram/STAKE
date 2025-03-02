@@ -221,6 +221,21 @@
       function ouvreLienAffi() {
          window.open("https://stake.bet/?c=LaMenace");
       }
+
+      window.onload = function () {
+         const urlParams = new URLSearchParams(window.location.search);
+         const item = urlParams.get('item');
+
+         if (item === 'vpn') {
+            document.getElementById('vpnItem').querySelector('.collapsible-header').click();
+         } else if (item === 'inscription') {
+            document.getElementById('inscriptionItem').querySelector('.collapsible-header').click();
+         } else if (item === 'depot') {
+            document.getElementById('depotItem').querySelector('.collapsible-header').click();
+         } else if (item === 'retrait') {
+            document.getElementById('retraitItem').querySelector('.collapsible-header').click();
+         }
+      }
    </script>
 
 </body>
