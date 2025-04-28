@@ -67,6 +67,10 @@
          border-radius: 5px;
          border-color: white;
       }
+
+      .selected {
+         border-color: green !important;
+      }
    </style>
 </head>
 
@@ -74,19 +78,37 @@
    <div>
       <h5 class="center-align" style="margin:0"><img src="aide.png" style="width: 360px;"></h5>
    </div>
+   <div style="text-align: center; width: 300px; margin: 20px auto;" class="center-align">
+      <label for="languageSelect" data-fr="Choisissez votre langue :" data-en="Choose your language:"
+         data-no="Velg ditt språk:">Choisissez votre langue :</label>
+      <div>
+         <img src="france.png" alt="Français" onclick="setLanguage('fr')"
+            style="cursor: pointer; width: 60px; height: 40px; margin: 5px; border: 2px solid white; border-radius: 5px;"
+            class="selected">
+         <img src="england.png" alt="Anglais" onclick="setLanguage('en')"
+            style="cursor: pointer; width: 60px; height: 40px; margin: 5px; border: 2px solid white; border-radius: 5px;">
+         <img src="norway.png" alt="Norvégien" onclick="setLanguage('no')"
+            style="cursor: pointer; width: 60px; height: 40px; margin: 5px; border: 2px solid white; border-radius: 5px;">
+      </div>
+   </div>
    <ul class="collapsible" style="margin-top:-4px;border:unset !important;box-shadow: none !important;">
       <li id="vpnItem" class="container btnContainer">
          <div class="row collapsible-header titreCollapse">
             <div class="col s2">
                <img src="VPN.svg" class="imgLeft">
             </div>
-            <div class="col s10 s10Right">
+            <div class="col s10 s10Right" data-fr="VPN : aide et conseil" data-en="VPN: Help and Advice"
+               data-no="VPN: Hjelp og råd">
                VPN : aide et conseil<i class="material-icons imgDroite">chevron_right</i>
             </div>
          </div>
-         <div style="background-color:#101B22" class="collapsible-body text">
+         <div style="background-color:#101B22" class="collapsible-body text"
+            data-fr="<p><u>Étape 1 : Choisissez un VPN gratuit réputé.</u><br><br>Nous vous conseillons plusieurs VPN gratuits tels que : <a href='https://hola.org/'>HolaVPN</a>, TunnelBear...<br><br><u>Étape 2 : Téléchargez et installez l'application.</u><br><br>Visitez le site web du VPN choisi, téléchargez et installez l'extension ou l'application sur votre appareil.<br><br><u>Étape 3 : Inscrivez-vous et connectez-vous.</u><br><br>Créez un compte gratuit en utilisant une adresse e-mail valide, puis connectez-vous à l'application.<br><br><u>Étape 4 : Sélectionnez un serveur et connectez-vous.</u><br><br>Choisissez un serveur (de préférence en Norvège ou en Finlande) et cliquez sur le bouton de connexion pour établir une connexion sécurisée.<br><br>C'est tout ! Vous êtes maintenant connecté via un VPN et votre navigation est sécurisée et anonyme.</p>"
+            data-en="<p><u>Step 1: Choose a reputable free VPN.</u><br><br>We recommend several free VPNs such as: <a href='https://hola.org/'>HolaVPN</a>, TunnelBear...<br><br><u>Step 2: Download and install the application.</u><br><br>Visit the chosen VPN's website, download and install the extension or application on your device.<br><br><u>Step 3: Sign up and log in.</u><br><br>Create a free account using a valid email address, then log in to the application.<br><br><u>Step 4: Select a server and connect.</u><br><br>Choose a server (preferably in Norway or Finland) and click the connect button to establish a secure connection.<br><br>That's it! You are now connected via a VPN and your browsing is secure and anonymous.</p>"
+            data-no="<p><u>Trinn 1: Velg en anerkjent gratis VPN.</u><br><br>Vi anbefaler flere gratis VPN-er som: <a href='https://hola.org/'>HolaVPN</a>, TunnelBear...<br><br><u>Trinn 2: Last ned og installer applikasjonen.</u><br><br>Besøk den valgte VPNs nettsted, last ned og installer utvidelsen eller applikasjonen på enheten din.<br><br><u>Trinn 3: Registrer deg og logg inn.</u><br><br>Opprett en gratis konto ved å bruke en gyldig e-postadresse, og logg deretter inn på applikasjonen.<br><br><u>Trinn 4: Velg en server og koble til.</u><br><br>Velg en server (helst i Norge eller Finland) og klikk på koble til-knappen for å etablere en sikker tilkobling.<br><br>Det er det! Du er nå koblet til via en VPN, og surfingen din er sikker og anonym.</p>">
             <p><u>Étape 1 : Choisissez un VPN gratuit réputé.</u><br><br>
-               Nous vous conseillons plusieurs VPN gratuits tels que : <a href="https://hola.org/">HolaVPN</a>, TunnelBear...<br><br>
+               Nous vous conseillons plusieurs VPN gratuits tels que : <a href="https://hola.org/">HolaVPN</a>,
+               TunnelBear...<br><br>
 
                <u>Étape 2 : Téléchargez et installez l'application.</u><br><br>
                Visitez le site web du VPN choisi, téléchargez et installez l'extension ou l'application sur votre
@@ -97,7 +119,8 @@
                l'application.<br><br>
 
                <u>Étape 4 : Sélectionnez un serveur et connectez-vous.</u><br><br>
-               Choisissez un serveur (de préférence en Norvège ou en Finlande) et cliquez sur le bouton de connexion pour
+               Choisissez un serveur (de préférence en Norvège ou en Finlande) et cliquez sur le bouton de connexion
+               pour
                établir une connexion sécurisée.<br><br>
 
                C'est tout ! Vous êtes maintenant connecté via un VPN et votre navigation est sécurisée et anonyme.
@@ -110,11 +133,15 @@
             <div class="col s2">
                <img src="inscription.svg" class="imgLeft">
             </div>
-            <div class="col s10 s10Right">
+            <div class="col s10 s10Right" data-fr="Comment s'inscrire ?" data-en="How to sign up?"
+               data-no="Hvordan registrere seg?">
                Comment s'inscrire ?<i class="material-icons imgDroite">chevron_right</i>
             </div>
          </div>
-         <div style="background-color:#101B22" class="collapsible-body text" id="tutorielInscription">
+         <div style="background-color:#101B22" class="collapsible-body text" id="tutorielInscription"
+            data-fr="<p><u>Étape 1 :</u><br><br>Rendez-vous sur le lien suivant : <a href='' onclick='ouvreLienAffi()'>Stake.bet</a> puis cliquez sur le bouton 'S'inscrire' ou 'Créer un compte'.<br><br><u>Étape 2 :</u><br><br>Remplissez le formulaire d'inscription en fournissant les informations requises, telles que votre adresse e-mail, mot de passe, nom d'utilisateur, etc.<br><br><u>Étape 3 :</u><br><br>Vérifiez votre adresse e-mail en cliquant sur le lien de confirmation envoyé par Stake.<br><br>Bonne chance ! Si vous souhaitez profiter d'un bonus de 30€ ou 200%, il suffit de retourner au menu principal et de cliquer sur 'Accéder aux bonus'.</p>"
+            data-en="<p><u>Step 1:</u><br><br>Go to the following link: <a href='' onclick='ouvreLienAffi()'>Stake.bet</a> then click on the 'Sign Up' or 'Create Account' button.<br><br><u>Step 2:</u><br><br>Fill out the registration form by providing the required information, such as your email address, password, username, etc.<br><br><u>Step 3:</u><br><br>Verify your email address by clicking on the confirmation link sent by Stake.<br><br>Good luck! If you want to enjoy a bonus of €30 or 200%, just return to the main menu and click on 'Access bonuses'.</p>"
+            data-no="<p><u>Trinn 1:</u><br><br>Gå til følgende lenke: <a href='' onclick='ouvreLienAffi()'>Stake.bet</a> og klikk deretter på 'Registrer deg' eller 'Opprett konto'-knappen.<br><br><u>Trinn 2:</u><br><br>Fyll ut registreringsskjemaet ved å oppgi den nødvendige informasjonen, for eksempel e-postadresse, passord, brukernavn, etc.<br><br><u>Trinn 3:</u><br><br>Bekreft e-postadressen din ved å klikke på bekreftelseslenken sendt av Stake.<br><br>Lykke til! Hvis du vil nyte en bonus på €30 eller 200%, bare gå tilbake til hovedmenyen og klikk på 'Få tilgang til bonuser'.</p>">
             <p><u>Étape 1 :</u><br><br>
 
                Rendez-vous sur le lien suivant : <a href="" onclick="ouvreLienAffi()">Stake.bet</a> puis cliquez sur
@@ -141,7 +168,8 @@
             <div class="col s2">
                <img src="deposit.svg" class="imgLeft">
             </div>
-            <div class="col s10 s10Right">
+            <div class="col s10 s10Right" data-fr="Comment déposer sur Stake ?" data-en="How to deposit on Stake?"
+               data-no="Hvordan sette inn på Stake?">
                Comment déposer sur Stake ?<i class="material-icons imgDroite">chevron_right</i>
             </div>
          </div>
@@ -157,7 +185,8 @@
 
                Sur la page de dépôt, vous verrez différentes options pour déposer des fonds. Sélectionnez la méthode
                de dépôt qui vous convient le mieux.
-               Si vous optez pour une cryptomonnaie, copiez l'adresse de dépôt ou scannez le code QR fourni par Stake.bet et transférez les fonds depuis votre portefeuille de cryptomonnaie.
+               Si vous optez pour une cryptomonnaie, copiez l'adresse de dépôt ou scannez le code QR fourni par
+               Stake.bet et transférez les fonds depuis votre portefeuille de cryptomonnaie.
                Si vous choisissez une carte de crédit/débit, vous devez passer par Moonpay. Suivez les instructions
                depuis le site de .<br><br>
 
@@ -166,7 +195,7 @@
                Une fois que la transaction est confirmée, les fonds seront crédités sur votre compte .
                Remarque : Les délais de traitement des dépôts peuvent varier en fonction de la méthode choisie, donc
                soyez patient si la transaction prend un peu de temps. Si vous rencontrez des problèmes ou avez des
-               questions, n'hésitez pas à contacter le support client de  pour obtenir de l'aide.<br><br>
+               questions, n'hésitez pas à contacter le support client de pour obtenir de l'aide.<br><br>
 
                Et voilà ! Vous avez maintenant appris comment déposer des fonds sur Stake.bet en 3 étapes
                simples.<br><br>
@@ -179,7 +208,8 @@
             <div class="col s2">
                <img src="retirer.svg" class="imgLeft">
             </div>
-            <div class="col s10 s10Right">
+            <div class="col s10 s10Right" data-fr="Comment retirer sur Stake ?" data-en="How to withdraw on Stake?"
+               data-no="Hvordan ta ut på Stake?">
                Comment retirer sur Stake ?<i class="material-icons imgDroite">chevron_right</i>
             </div>
          </div>
@@ -192,8 +222,10 @@
 
                <u>Étape 2 : Choisissez la balance que vous souhaitez retirer</u><br><br>
 
-               En cliquant sur "Portefeuille", puis "Retirer", vous avez accès à vos balances sur le site. Choisissez celle
-               dans laquelle vous souhaitez effectuer un retrait. Ensuite, renseignez l'adresse de retrait en fonction de la
+               En cliquant sur "Portefeuille", puis "Retirer", vous avez accès à vos balances sur le site. Choisissez
+               celle
+               dans laquelle vous souhaitez effectuer un retrait. Ensuite, renseignez l'adresse de retrait en fonction
+               de la
                cryptomonnaie : BTC, ETH, LTC, etc.<br><br>
 
                <u>Étape 3 : Confirmez le retrait</u><br><br>
@@ -219,6 +251,53 @@
          window.open("https://stake.bet/?c=LaMenace");
       }
 
+      function setLanguage(language) {
+         const elements = document.querySelectorAll('.collapsible-body');
+         const flags = document.querySelectorAll('img[alt]');
+         const titles = document.querySelectorAll('.col.s10.s10Right');
+         const languageLabel = document.querySelector('label[for="languageSelect"]');
+
+         flags.forEach(flag => {
+            flag.classList.remove('selected');
+         });
+
+         if (language === 'fr') {
+            document.querySelector('img[alt="Français"]').classList.add('selected');
+         } else if (language === 'en') {
+            document.querySelector('img[alt="Anglais"]').classList.add('selected');
+         } else if (language === 'no') {
+            document.querySelector('img[alt="Norvégien"]').classList.add('selected');
+         }
+
+         elements.forEach(element => {
+            if (language === 'fr') {
+               element.innerHTML = element.getAttribute('data-fr');
+            } else if (language === 'en') {
+               element.innerHTML = element.getAttribute('data-en');
+            } else if (language === 'no') {
+               element.innerHTML = element.getAttribute('data-no');
+            }
+         });
+
+         titles.forEach(title => {
+            if (language === 'fr') {
+               title.innerHTML = title.getAttribute('data-fr') + '<i class="material-icons imgDroite">chevron_right</i>';
+            } else if (language === 'en') {
+               title.innerHTML = title.getAttribute('data-en') + '<i class="material-icons imgDroite">chevron_right</i>';
+            } else if (language === 'no') {
+               title.innerHTML = title.getAttribute('data-no') + '<i class="material-icons imgDroite">chevron_right</i>';
+            }
+         });
+
+         if (language === 'fr') {
+            languageLabel.innerHTML = languageLabel.getAttribute('data-fr');
+         } else if (language === 'en') {
+            languageLabel.innerHTML = languageLabel.getAttribute('data-en');
+         } else if (language === 'no') {
+            languageLabel.innerHTML = languageLabel.getAttribute('data-no');
+         }
+      }
+
       window.onload = function () {
          const urlParams = new URLSearchParams(window.location.search);
          const item = urlParams.get('item');
@@ -232,6 +311,7 @@
          } else if (item === 'retrait') {
             document.getElementById('retraitItem').querySelector('.collapsible-header').click();
          }
+         setLanguage('fr'); // Initialize with default language
       }
    </script>
 
