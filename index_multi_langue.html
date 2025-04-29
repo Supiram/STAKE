@@ -1,0 +1,405 @@
+<html>
+
+<head>
+   <title>The Materialize Collapsible Example</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+   <link rel=" stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+   </script>
+
+   <style>
+      .titreCollapse {
+         background-color: #1B2B38;
+         background-image: url("fond_btn.svg");
+         background-repeat: no-repeat;
+         margin: 4px;
+         border-bottom: unset !important;
+         color: white;
+         background-position: center;
+         height: 60px;
+         padding-top: 8px;
+         margin-bottom: 8px;
+      }
+
+      li {
+         box-shadow: unset !important;
+      }
+
+      .imgDroite {
+         float: right !important;
+         margin-right: 0 !important;
+      }
+
+      .text {
+         text-align: left;
+         width: 94% !important;
+         margin: auto;
+         color: #FFFFFF;
+         border-bottom: unset !important;
+         margin-top: -8px;
+         border-bottom-left-radius: 10px;
+         border-bottom-right-radius: 10px;
+      }
+
+      p {
+         padding: 1rem !important;
+      }
+
+      .btnContainer {
+         max-width: 360;
+         min-width: 360;
+      }
+
+      .imgLeft {
+         margin-top: 3;
+         text-align: center;
+         float: right;
+      }
+
+      .s10Right {
+         padding-right: 0 !important;
+         padding-left: 0 !important;
+      }
+
+      .btnRedirection {
+         background-color: transparent;
+         border-radius: 5px;
+         border-color: white;
+      }
+
+      .selected {
+         border-color: green !important;
+      }
+   </style>
+</head>
+
+<body style="background-color:#1B2B38">
+   <div>
+      <h5 class="center-align" style="margin:0"><img src="logo.png" style="width: 360px;"></h5>
+   </div>
+   <div style="text-align: center; width: 300px; margin: 20px auto;" class="center-align">
+      <label for="languageSelect" data-fr="Choisissez votre langue :" data-en="Choose your language:"
+         data-no="Velg ditt språk:">Choisissez votre langue :</label>
+      <div>
+         <img src="france.png" alt="Français" onclick="setLanguage('fr')"
+            style="cursor: pointer; width: 60px; height: 40px; margin: 5px; border: 2px solid white; border-radius: 5px;"
+            class="selected">
+         <img src="england.png" alt="Anglais" onclick="setLanguage('en')"
+            style="cursor: pointer; width: 60px; height: 40px; margin: 5px; border: 2px solid white; border-radius: 5px;">
+         <img src="norway.png" alt="Norvégien" onclick="setLanguage('no')"
+            style="cursor: pointer; width: 60px; height: 40px; margin: 5px; border: 2px solid white; border-radius: 5px;">
+      </div>
+   </div>
+   <ul class="collapsible" style="margin-top:-4px;border:unset !important;box-shadow: none !important;">
+
+      <li class="container btnContainer">
+         <div class="row collapsible-header titreCollapse">
+            <div class="col s2">
+               <img src="etoile.svg" class="imgLeft">
+            </div>
+            <div class="col s10 s10Right"
+               data-fr="Les rangs VIP&nbsp;&nbsp;&nbsp;&nbsp;<img src='benefits.svg' style='vertical-align: middle;'><i class='material-icons imgDroite'>chevron_right</i>"
+               data-en="VIP Ranks&nbsp;&nbsp;&nbsp;&nbsp;<img src='benefits.svg' style='vertical-align: middle;'><i class='material-icons imgDroite'>chevron_right</i>"
+               data-no="VIP-nivåer&nbsp;&nbsp;&nbsp;&nbsp;<img src='benefits.svg' style='vertical-align: middle;'><i class='material-icons imgDroite'>chevron_right</i>">
+               Les rangs VIP&nbsp;&nbsp;&nbsp;&nbsp;<img src="benefits.svg" style="vertical-align: middle;"><i
+                  class="material-icons imgDroite">chevron_right</i>
+            </div>
+         </div>
+         <div style="background-color:#101B22" class="collapsible-body text"
+            data-fr="<p>Le programme vip de stake est très complet. Il est composé de <b>10 rangs.</b><br><br>De silver à diamand, tu pourras profiter de nombreux bonus ainsi qu'un canal telegram privée.<br><br><img src='rank.png' style='width: 304px;'><br><br>Si tu souhaites en savoir plus sur le programme, je t'invite à consulter cet article.<br><br><a href='https://stake.bet/fr/vip-club#vip-rewards' target='_blank'><img src='vip_rank.png' style='width: 300px;'></a></p>"
+            data-en="<p>The Stake VIP program is very complete. It consists of <b>10 ranks.</b><br><br>From Silver to Diamond, you can enjoy many bonuses as well as a private Telegram channel.<br><br><img src='rank.png' style='width: 304px;'><br><br>If you want to know more about the program, check out this article.<br><br><a href='https://stake.bet/en/vip-club#vip-rewards' target='_blank'><img src='vip_rank.png' style='width: 300px;'></a></p>"
+            data-no="<p>Stake sitt VIP-program er veldig komplett. Det består av <b>10 nivåer.</b><br><br>Fra Silver til Diamond kan du nyte mange bonuser samt en privat Telegram-kanal.<br><br><img src='rank.png' style='width: 304px;'><br><br>Hvis du vil vite mer om programmet, kan du lese denne artikkelen.<br><br><a href='https://stake.bet/no/vip-club#vip-rewards' target='_blank'><img src='vip_rank.png' style='width: 300px;'></a></p>">
+            <p>Le programme vip de stake est très complet. Il est composé de <b>10 rangs.</b><br><br>
+               De silver à diamand, tu pourras profiter de nombreux bonus ainsi qu'un canal telegram privée.<br><br>
+               <img src="rank.png" style="width: 304;"><br><br>
+               Si tu souhaites en savoir plus sur le programme, je t'invite à consulter cet article.<br><br><a
+                  href="https://stake.bet/fr/vip-club#vip-rewards" target="_blank"><img src="vip_rank.png"
+                     style="width: 300px;"></a>
+            </p>
+         </div>
+      </li>
+
+      <li class="container btnContainer">
+         <div class="row collapsible-header titreCollapse">
+            <div class="col s2">
+               <img src="recharge_img.svg" class="imgLeft">
+            </div>
+            <div class="col s10 s10Right"
+               data-fr="Les recharges&nbsp;&nbsp;&nbsp;&nbsp;<img src='bonus.svg' style='vertical-align: middle;'><i class='material-icons imgDroite'>chevron_right</i>"
+               data-en="Reloads&nbsp;&nbsp;&nbsp;&nbsp;<img src='bonus.svg' style='vertical-align: middle;'><i class='material-icons imgDroite'>chevron_right</i>"
+               data-no="Påfyllinger&nbsp;&nbsp;&nbsp;&nbsp;<img src='bonus.svg' style='vertical-align: middle;'><i class='material-icons imgDroite'>chevron_right</i>">
+               Les recharges&nbsp;&nbsp;&nbsp;&nbsp;<img src="bonus.svg" style="vertical-align: middle;"><i
+                  class="material-icons imgDroite">chevron_right</i>
+            </div>
+         </div>
+         <div style="background-color:#101B22" class="collapsible-body text"
+            data-fr="<p>Sur Stake, la recharge est une fonction qui vous octroie une somme d'argent que vous pouvez réclamer à des intervalles spécifiques.<br><br><img src='recharge.png' style='width: 304px;'><br><br>Le plus souvent, ces intervalles sont d'une fois par <b>24 heures.</b><br><br>Une fois que vous avez fait votre première réclamation de la recharge, <b>vous devez attendre 24 heures</b> avant qu'elle ne devienne disponible, et ainsi de suite.<br><br>Notez que vous ne pouvez pas cumuler les recharges, et que si vous manquez une recharge, elle est définitivement perdue.</p>"
+            data-en="<p>On Stake, the reload is a feature that gives you an amount of money you can claim at specific intervals.<br><br><img src='recharge.png' style='width: 304px;'><br><br>Most often, these intervals are once every <b>24 hours.</b><br><br>Once you have made your first reload claim, <b>you must wait 24 hours</b> before it becomes available again, and so on.<br><br>Note that you cannot accumulate reloads, and if you miss one, it is permanently lost.</p>"
+            data-no="<p>På Stake er påfylling en funksjon som gir deg et beløp du kan kreve med bestemte intervaller.<br><br><img src='recharge.png' style='width: 304px;'><br><br>Oftest er disse intervallene én gang hver <b>24. time.</b><br><br>Når du har gjort ditt første krav på påfylling, <b>må du vente 24 timer</b> før det blir tilgjengelig igjen, og så videre.<br><br>Merk at du ikke kan samle opp påfyllinger, og hvis du går glipp av en, er den tapt for alltid.</p>">
+            <p>Sur Stake, la recharge est une fonction qui vous octroie une somme d'argent que vous pouvez réclamer à
+               des intervalles spécifiques.<br><br>
+               <img src="recharge.png" style="width: 304;">
+               <br><br>
+               Le plus souvent, ces intervalles sont d'une fois par <b>24 heures.</b><br><br>
+               Une fois que vous avez fait votre première réclamation de la recharge, <b>vous devez attendre 24
+                  heures</b>
+               avant qu'elle ne devienne disponible, et ainsi de suite.<br><br>
+               Notez que vous ne pouvez pas cumuler les recharges, et que si vous manquez une recharge, elle est
+               définitivement perdue.
+            </p>
+         </div>
+      </li>
+
+      <li class="container btnContainer">
+         <div class="row collapsible-header titreCollapse">
+            <div class="col s2">
+               <img src="rakeback_titre.svg" class="imgLeft">
+            </div>
+            <div class="col s10 s10Right"
+               data-fr="Le rakeback&nbsp;&nbsp;&nbsp;&nbsp;<img src='bonus.svg' style='vertical-align: middle;'><i class='material-icons imgDroite'>chevron_right</i>"
+               data-en="Rakeback&nbsp;&nbsp;&nbsp;&nbsp;<img src='bonus.svg' style='vertical-align: middle;'><i class='material-icons imgDroite'>chevron_right</i>"
+               data-no="Rakeback&nbsp;&nbsp;&nbsp;&nbsp;<img src='bonus.svg' style='vertical-align: middle;'><i class='material-icons imgDroite'>chevron_right</i>">
+               Le rakeback&nbsp;&nbsp;&nbsp;&nbsp;<img src="bonus.svg" style="vertical-align: middle;"><i
+                  class="material-icons imgDroite">chevron_right</i>
+            </div>
+         </div>
+         <div style="background-color:#101B22" class="collapsible-body text"
+            data-fr="<p>Sur Stake, dès que vous placez un bet, vous allez récupérer une partie de ce bet. Et dès que vous le souhaitez vous pouvez récupérer ce bonus supplémentaire !<br><br><img src='rakeback.png' style='width: 304px;'><br><br>Plus vous allez wager sur le site, plus votre rakeback va être important. En montant dans les grades vips, votre % de rakeback va lui aussi augmenter.<br><br>Le rakeback est disponible à partir du rang bronze. Vous pourrez récupérer sur toutes vos mises avant le rang vip.</p>"
+            data-en="<p>On Stake, as soon as you place a bet, you get back a part of that bet. And whenever you want, you can claim this extra bonus!<br><br><img src='rakeback.png' style='width: 304px;'><br><br>The more you wager on the site, the higher your rakeback will be. As you move up in VIP ranks, your rakeback percentage also increases.<br><br>Rakeback is available from the Bronze rank. You can claim it on all your bets before reaching VIP rank.</p>"
+            data-no="<p>På Stake får du tilbake en del av innsatsen din så snart du plasserer et veddemål. Og når du vil, kan du hente ut denne ekstra bonusen!<br><br><img src='rakeback.png' style='width: 304px;'><br><br>Jo mer du spiller på siden, jo høyere blir din rakeback. Når du går opp i VIP-nivåene, øker også rakeback-prosenten din.<br><br>Rakeback er tilgjengelig fra bronse-nivå. Du kan hente den ut på alle dine innsatser før VIP-nivået.</p>">
+            <p>Sur Stake, dès que vous placez un bet, vous allez récupérer une partie de ce bet. Et dès que vous le
+               souhaitez vous pouvez récupérer ce bonus supplémentaire !<br><br>
+               <img src="rakeback.png" style="width: 304;"><br><br>
+               Plus vous allez wager sur le site, plus votre rakeback va être important. En montant dans les grades
+               vips, votre % de rakeback va lui aussi augmenter.<br><br>
+               Le rakeback est disponible à partir du rang bronze. Vous pourrez récupérer sur toutes vos mises avant le
+               rang vip.
+            </p>
+         </div>
+      </li>
+
+      <li class="container btnContainer">
+         <div class="row collapsible-header titreCollapse">
+            <div class="col s2">
+               <img src="weekly_img.svg" class="imgLeft">
+            </div>
+            <div class="col s10 s10Right"
+               data-fr="Bonus Weekly&nbsp;&nbsp;&nbsp;&nbsp;<img src='bonus.svg' style='vertical-align: middle;'><i class='material-icons imgDroite'>chevron_right</i>"
+               data-en="Weekly Bonus&nbsp;&nbsp;&nbsp;&nbsp;<img src='bonus.svg' style='vertical-align: middle;'><i class='material-icons imgDroite'>chevron_right</i>"
+               data-no="Ukentlig bonus&nbsp;&nbsp;&nbsp;&nbsp;<img src='bonus.svg' style='vertical-align: middle;'><i class='material-icons imgDroite'>chevron_right</i>">
+               Bonus Weekly&nbsp;&nbsp;&nbsp;&nbsp;<img src="bonus.svg" style="vertical-align: middle;"><i
+                  class="material-icons imgDroite">chevron_right</i>
+            </div>
+         </div>
+         <div style="background-color:#101B22" class="collapsible-body text"
+            data-fr="<p>En plus du bonus mensuel, le boost hebdomadaire est un bonus distribué par Stake afin de récompenser les joueurs actifs.<br><br><b>Qui est éligible pour bénéficier de ce bonus ?</b><br>Tous les joueurs de grade Bronze sont éligibles, sans aucune exception.<br><br><b>Quand est-ce que le bonus est distribué ?</b><br>Chaque samedi à 14h30. UTC+2<br><br><img src='weekly.png' style='width: 304px;'><br><br>Il est possible qu'un léger retard survienne, mais nous vous enverrons le lien du bonus dès qu'il est disponible.<br><br><a href='https://t.me/joinchat/AAAAAFUOPsOa-Pxy_zzBDg' target='_blank'><img src='vip_telegram.png' style='width: 300px;'></a></p>"
+            data-en="<p>In addition to the monthly bonus, the weekly boost is a bonus distributed by Stake to reward active players.<br><br><b>Who is eligible for this bonus?</b><br>All Bronze grade players are eligible, without exception.<br><br><b>When is the bonus distributed?</b><br>Every Saturday at 2:30 p.m. UTC+2<br><br><img src='weekly.png' style='width: 304px;'><br><br>There may be a slight delay, but we will send you the bonus link as soon as it is available.<br><br><a href='https://t.me/joinchat/AAAAAFUOPsOa-Pxy_zzBDg' target='_blank'><img src='vip_telegram.png' style='width: 300px;'></a></p>"
+            data-no="<p>I tillegg til månedlig bonus er det en ukentlig boost som deles ut av Stake for å belønne aktive spillere.<br><br><b>Hvem er kvalifisert for denne bonusen?</b><br>Alle spillere med bronsegrad er kvalifisert, uten unntak.<br><br><b>Når deles bonusen ut?</b><br>Hver lørdag kl. 14:30. UTC+2<br><br><img src='weekly.png' style='width: 304px;'><br><br>Det kan hende det blir en liten forsinkelse, men vi sender deg bonuslenken så snart den er tilgjengelig.<br><br><a href='https://t.me/joinchat/AAAAAFUOPsOa-Pxy_zzBDg' target='_blank'><img src='vip_telegram.png' style='width: 300px;'></a></p>">
+            <p>
+               En plus du bonus mensuel, le boost hebdomadaire est un bonus distribué par Stake afin de récompenser les
+               joueurs actifs.<br><br>
+               <b>Qui est éligible pour bénéficier de ce bonus ?</b><br>
+               Tous les joueurs de grade Bronze sont éligibles, sans aucune exception.<br><br>
+               <b>Quand est-ce que le bonus est distribué ?</b><br>
+               Chaque samedi à 14h30. UTC+2<br><br>
+               <img src="weekly.png" style="width: 304;"><br><br>
+               Il est possible qu'un léger retard survienne, mais nous vous enverrons le lien du bonus dès qu'il est
+               disponible.<br><br>
+               <a href="https://t.me/joinchat/AAAAAFUOPsOa-Pxy_zzBDg" target="_blank"><img src="vip_telegram.png"
+                     style="width: 300px;"></a>
+            </p>
+         </div>
+      </li>
+
+      <li class="container btnContainer">
+         <div class="row collapsible-header titreCollapse">
+            <div class="col s2">
+               <img src="monthly_img.svg" class="imgLeft">
+            </div>
+            <div class="col s10 s10Right"
+               data-fr="Bonus Monthly&nbsp;&nbsp;&nbsp;&nbsp;<img src='bonus.svg' style='vertical-align: middle;'><i class='material-icons imgDroite'>chevron_right</i>"
+               data-en="Monthly Bonus&nbsp;&nbsp;&nbsp;&nbsp;<img src='bonus.svg' style='vertical-align: middle;'><i class='material-icons imgDroite'>chevron_right</i>"
+               data-no="Månedlig bonus&nbsp;&nbsp;&nbsp;&nbsp;<img src='bonus.svg' style='vertical-align: middle;'><i class='material-icons imgDroite'>chevron_right</i>">
+               Bonus Monthly&nbsp;&nbsp;&nbsp;&nbsp;<img src="bonus.svg" style="vertical-align: middle;"><i
+                  class="material-icons imgDroite">chevron_right</i>
+            </div>
+         </div>
+         <div style="background-color:#101B22" class="collapsible-body text"
+            data-fr="<p>Pour pouvoir profiter du bonus mensuel, vous devez avoir un compte en règle chez Stake, et votre adresse électronique doit être vérifiée.<br><br>Le bonus mensuel est une somme supplémentaire attribuée à tous les joueurs éligibles, une fois par mois.<br><br>Il y a très peu de restrictions en termes de dépôt et de mise qui entourent le bonus mensuel, il suffit d'être un joueur actif.<br><br><img src='monthly.png' style='width: 304px;'><br><br>Comme le bonus 'Weekly' nous vous enverrons le lien pour le Monthly, mais vous pouvez l'obtenir dans vos mail ou sur le Telegram officiel de Stake.<br><br><a href='https://t.me/joinchat/AAAAAFUOPsOa-Pxy_zzBDg' target='_blank'><img src='vip_telegram.png' style='width: 300px;'></a></p>"
+            data-en="<p>To enjoy the monthly bonus, you must have a valid account on Stake, and your email address must be verified.<br><br>The monthly bonus is an extra amount given to all eligible players, once a month.<br><br>There are very few restrictions in terms of deposit and wagering for the monthly bonus, you just need to be an active player.<br><br><img src='monthly.png' style='width: 304px;'><br><br>Like the 'Weekly' bonus, we will send you the link for the Monthly, but you can also get it in your email or on Stake's official Telegram.<br><br><a href='https://t.me/joinchat/AAAAAFUOPsOa-Pxy_zzBDg' target='_blank'><img src='vip_telegram.png' style='width: 300px;'></a></p>"
+            data-no="<p>For å få månedlig bonus må du ha en gyldig konto hos Stake, og e-postadressen din må være bekreftet.<br><br>Den månedlige bonusen er et ekstra beløp som gis til alle kvalifiserte spillere, én gang i måneden.<br><br>Det er svært få begrensninger når det gjelder innskudd og omsetning for den månedlige bonusen, du må bare være en aktiv spiller.<br><br><img src='monthly.png' style='width: 304px;'><br><br>Akkurat som med 'Weekly'-bonusen sender vi deg lenken for Monthly, men du kan også få den på e-post eller på Stakes offisielle Telegram.<br><br><a href='https://t.me/joinchat/AAAAAFUOPsOa-Pxy_zzBDg' target='_blank'><img src='vip_telegram.png' style='width: 300px;'></a></p>">
+            <p>Pour pouvoir profiter du bonus mensuel, vous devez avoir un compte en règle chez Stake, et votre adresse
+               électronique doit être vérifiée.<br><br>
+               Le bonus mensuel est une somme supplémentaire attribuée à tous les joueurs éligibles, une fois par
+               mois.<br><br>
+               Il y a très peu de restrictions en termes de dépôt et de mise qui entourent le bonus mensuel, il suffit
+               d'être un joueur actif.<br><br>
+               <img src="monthly.png" style="width: 304;"><br><br>
+               Comme le bonus "Weekly" nous vous enverrons le lien pour le Monthly, mais vous pouvez l'obtenir dans vos
+               mail ou sur le Telegram officiel de Stake.<br><br>
+               <a href="https://t.me/joinchat/AAAAAFUOPsOa-Pxy_zzBDg" target="_blank"><img src="vip_telegram.png"
+                     style="width: 300px;"></a>
+            </p>
+         </div>
+      </li>
+
+      <li class="container btnContainer">
+         <div class="row collapsible-header titreCollapse">
+            <div class="col s2">
+               <img src="defis_img.svg" class="imgLeft">
+            </div>
+            <div class="col s10 s10Right"
+               data-fr="Les défis&nbsp;&nbsp;&nbsp;&nbsp;<img src='bonus.svg' style='vertical-align: middle;'><i class='material-icons imgDroite'>chevron_right</i>"
+               data-en="Challenges&nbsp;&nbsp;&nbsp;&nbsp;<img src='bonus.svg' style='vertical-align: middle;'><i class='material-icons imgDroite'>chevron_right</i>"
+               data-no="Utfordringer&nbsp;&nbsp;&nbsp;&nbsp;<img src='bonus.svg' style='vertical-align: middle;'><i class='material-icons imgDroite'>chevron_right</i>">
+               Les défis&nbsp;&nbsp;&nbsp;&nbsp;<img src="bonus.svg" style="vertical-align: middle;"><i
+                  class="material-icons imgDroite">chevron_right</i>
+            </div>
+         </div>
+         <div style="background-color:#101B22" class="collapsible-body text"
+            data-fr="<p>Les défis sur stake sont créée par votre streameur.<br><br>Ils consistent à réussir un challenge sur un mode de jeu ou une slot précise.<br><br><img src='defis.png' style='width: 304px;'><br><br><b>Exemple :</b> le défis est d'atteindre la bille x1000 au plinko. Le premier joueur qui atteint cet objectif à partir du défis commencé, remporte le cashprize indiqué.</p>"
+            data-en="<p>Challenges on Stake are created by your streamer.<br><br>They consist of completing a challenge on a specific game mode or slot.<br><br><img src='defis.png' style='width: 304px;'><br><br><b>Example:</b> The challenge is to reach the x1000 ball on Plinko. The first player to achieve this after the challenge starts wins the indicated cash prize.</p>"
+            data-no="<p>Utfordringer på Stake lages av din streamer.<br><br>De går ut på å klare en utfordring på en bestemt spillmodus eller spilleautomat.<br><br><img src='defis.png' style='width: 304px;'><br><br><b>Eksempel:</b> Utfordringen er å nå x1000-kulen på Plinko. Den første spilleren som klarer dette etter at utfordringen har startet, vinner den oppgitte pengepremien.</p>">
+            <p>Les défis sur stake sont créée par votre streameur.<br><br>
+               Ils consistent à réussir un challenge sur un mode de
+               jeu ou une slot précise.<br><br>
+               <img src="defis.png" style="width: 304;"><br><br>
+               <b>Exemple :</b> le défis est d'atteindre la bille x1000 au plinko. Le premier joueur qui
+               atteint cet objectif à partir du défis commencé, remporte le cashprize indiqué.
+            </p>
+         </div>
+      </li>
+
+      <li class="container btnContainer">
+         <div class="row collapsible-header titreCollapse">
+            <div class="col s2">
+               <img src="code_img.svg" class="imgLeft">
+            </div>
+            <div class="col s10 s10Right"
+               data-fr="Les codes&nbsp;&nbsp;&nbsp;&nbsp;<img src='bonus.svg' style='vertical-align: middle;'><i class='material-icons imgDroite'>chevron_right</i>"
+               data-en="Codes&nbsp;&nbsp;&nbsp;&nbsp;<img src='bonus.svg' style='vertical-align: middle;'><i class='material-icons imgDroite'>chevron_right</i>"
+               data-no="Koder&nbsp;&nbsp;&nbsp;&nbsp;<img src='bonus.svg' style='vertical-align: middle;'><i class='material-icons imgDroite'>chevron_right</i>">
+               Les codes&nbsp;&nbsp;&nbsp;&nbsp;<img src="bonus.svg" style="vertical-align: middle;"><i
+                  class="material-icons imgDroite">chevron_right</i>
+            </div>
+         </div>
+         <div style="background-color:#101B22" class="collapsible-body text"
+            data-fr="<p>Les codes stake sont distribués par <b>les streamers directement</b> sur <b>leurs lives ou leurs réseaux sociaux.</b><br><br>Ces codes sont valables <b>qu'une seule fois</b> et ont un nombre d'usages limités.<br><br><a href='https://stake.bet/fr/settings/offers' target='_blank'><img src='code_drop.png' style='width: 300px;'></a><br><br><img src='code.png' style='width: 304px;'></p>"
+            data-en="<p>Stake codes are distributed <b>directly by streamers</b> on <b>their live streams or social networks.</b><br><br>These codes are valid <b>only once</b> and have a limited number of uses.<br><br><a href='https://stake.bet/en/settings/offers' target='_blank'><img src='code_drop.png' style='width: 300px;'></a><br><br><img src='code.png' style='width: 304px;'></p>"
+            data-no="<p>Stake-koder deles ut <b>direkte av streamere</b> på <b>deres livesendinger eller sosiale nettverk.</b><br><br>Disse kodene er gyldige <b>kun én gang</b> og har et begrenset antall bruk.<br><br><a href='https://stake.bet/no/settings/offers' target='_blank'><img src='code_drop.png' style='width: 300px;'></a><br><br><img src='code.png' style='width: 304px;'></p>">
+            <p>Les codes stake sont distribués par <b>les streamers directement</b> sur <b>leurs lives ou leurs réseaux
+                  sociaux.</b>
+               <br><br>
+               Ces codes sont valables <b>qu'une seule fois</b> et ont un nombre d'usages
+               limités.<br><br>
+               <a href="https://stake.bet/fr/settings/offers" target="_blank"><img src="code_drop.png"
+                     style="width: 300px;"></a><br><br>
+               <img src="code.png" style="width: 304;">
+            </p>
+         </div>
+      </li>
+
+      <li class="container btnContainer">
+         <div class="row collapsible-header titreCollapse">
+            <div class="col s2">
+               <img src="tombola_img.svg" class="imgLeft">
+            </div>
+            <div class="col s10 s10Right"
+               data-fr="Tombola hebdomadaire<i class='material-icons imgDroite'>chevron_right</i>"
+               data-en="Weekly Raffle<i class='material-icons imgDroite'>chevron_right</i>"
+               data-no="Ukentlig trekning<i class='material-icons imgDroite'>chevron_right</i>">
+               Tombola hebdomadaire<i class="material-icons imgDroite">chevron_right</i>
+            </div>
+         </div>
+         <div style="background-color:#101B22" class="collapsible-body text"
+            data-fr="<p>Pour être éligible aux offres de bienvenu sur Stake, il suffit d'avoir un compte affilié à votre streameur et d'être en dessous du niveau bronze.<br><br><img src='tombola.png' style='width: 304px;'></p>"
+            data-en="<p>To be eligible for welcome offers on Stake, you just need to have an account affiliated with your streamer and be below the bronze level.<br><br><img src='tombola.png' style='width: 304px;'></p>"
+            data-no="<p>For å være kvalifisert for velkomsttilbud på Stake, trenger du bare å ha en konto tilknyttet din streamer og være under bronse-nivå.<br><br><img src='tombola.png' style='width: 304px;'></p>">
+            <p>Pour être éligible aux offres de bienvenu sur Stake, il suffit d'avoir un compte affilié à votre
+               streameur et
+               d'être en dessous du niveau bronze.<br><br>
+               <img src="tombola.png" style="width: 304;">
+            </p>
+         </div>
+      </li>
+
+      <li class="container btnContainer">
+         <div class="row collapsible-header titreCollapse">
+            <div class="col s2">
+               <img src="condition_img.svg" class="imgLeft">
+            </div>
+            <div class="col s10 s10Right" data-fr="Conditions<i class='material-icons imgDroite'>chevron_right</i>"
+               data-en="Conditions<i class='material-icons imgDroite'>chevron_right</i>"
+               data-no="Vilkår<i class='material-icons imgDroite'>chevron_right</i>">
+               Conditions<i class="material-icons imgDroite">chevron_right</i>
+            </div>
+         </div>
+         <div style="background-color:#101B22" class="collapsible-body text"
+            data-fr="<p>Pour être éligible aux offres de bienvenu sur stake, il suffit d'avoir un compte affilié à votre streameur et d'être en dessous du niveau bronze. Si toutes les conditions sont réunis veuillez contacter le bot ici pour entamer la procédure !</p>"
+            data-en="<p>To be eligible for welcome offers on Stake, you just need to have an account affiliated with your streamer and be below the bronze level. If all conditions are met, please contact the bot here to start the process!</p>"
+            data-no="<p>For å være kvalifisert for velkomsttilbud på Stake, trenger du bare å ha en konto tilknyttet din streamer og være under bronse-nivå. Hvis alle vilkår er oppfylt, vennligst kontakt boten her for å starte prosessen!</p>">
+            <p>Pour être éligible aux offres de bienvenu sur stake, il suffit d'avoir un compte affilié à votre
+               streameur et
+               d'être en dessous du niveau bronze. Si toutes les conditions sont réunis veuillez contacter le bot ici
+               pour entamer la procédure !</p>
+         </div>
+      </li>
+
+   </ul>
+
+   <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', function () {
+         var elems = document.querySelectorAll('.collapsible');
+         var instances = M.Collapsible.init(elems);
+      });
+      function setLanguage(language) {
+         const elements = document.querySelectorAll('.collapsible-body');
+         const flags = document.querySelectorAll('img[alt]');
+         const titles = document.querySelectorAll('.col.s10.s10Right');
+         const languageLabel = document.querySelector('label[for="languageSelect"]');
+         flags.forEach(flag => {
+            flag.classList.remove('selected');
+         });
+         if (language === 'fr') {
+            document.querySelector('img[alt="Français"]').classList.add('selected');
+         } else if (language === 'en') {
+            document.querySelector('img[alt="Anglais"]').classList.add('selected');
+         } else if (language === 'no') {
+            document.querySelector('img[alt="Norvégien"]').classList.add('selected');
+         }
+         elements.forEach(element => {
+            if (language === 'fr') {
+               element.innerHTML = element.getAttribute('data-fr');
+            } else if (language === 'en') {
+               element.innerHTML = element.getAttribute('data-en');
+            } else if (language === 'no') {
+               element.innerHTML = element.getAttribute('data-no');
+            }
+         });
+         titles.forEach(title => {
+            if (language === 'fr') {
+               title.innerHTML = title.getAttribute('data-fr');
+            } else if (language === 'en') {
+               title.innerHTML = title.getAttribute('data-en');
+            } else if (language === 'no') {
+               title.innerHTML = title.getAttribute('data-no');
+            }
+         });
+         if (language === 'fr') {
+            languageLabel.innerHTML = languageLabel.getAttribute('data-fr');
+         } else if (language === 'en') {
+            languageLabel.innerHTML = languageLabel.getAttribute('data-en');
+         } else if (language === 'no') {
+            languageLabel.innerHTML = languageLabel.getAttribute('data-no');
+         }
+      }
+      window.onload = function () {
+         setLanguage('fr');
+      }
+   </script>
+
+</body>
+
+</html>
