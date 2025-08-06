@@ -1,0 +1,271 @@
+<html>
+
+<head>
+   <title>The Materialize Collapsible Example</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+   <link rel=" stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+   </script>
+
+   <style>
+      .titreCollapse {
+         background-color: #1B2B38;
+         background-image: url("fond_btn.svg");
+         background-repeat: no-repeat;
+         margin: 4;
+         border-bottom: unset !important;
+         color: white;
+         background-position: center;
+         height: 60px;
+         padding-top: 8px;
+         margin-bottom: 8;
+      }
+
+      li {
+         box-shadow: unset !important;
+      }
+
+      .imgDroite {
+         float: right !important;
+         margin-right: 0 !important;
+      }
+
+      .text {
+         text-align: left;
+         width: 94% !important;
+         margin: auto;
+         color: #FFFFFF;
+         border-bottom: unset !important;
+         margin-top: -8px;
+         border-bottom-left-radius: 10px;
+         border-bottom-right-radius: 10px;
+      }
+
+      p {
+         padding: 1rem !important;
+      }
+
+      .btnContainer {
+         max-width: 360;
+         min-width: 360;
+      }
+
+      .imgLeft {
+         margin-top: 3;
+         text-align: center;
+         float: right;
+      }
+
+      .s10Right {
+         padding-right: 0 !important;
+         padding-left: 0 !important;
+      }
+
+      .btnRedirection {
+         background-color: transparent;
+         border-radius: 5px;
+         border-color: white;
+      }
+   </style>
+</head>
+
+<body style="background-color:#1B2B38">
+   <div>
+      <h5 class="center-align" style="margin:0"><img src="aide.png" style="width: 360;"></h5>
+   </div>
+   <ul class="collapsible" style="margin-top:-4px;border:unset !important;box-shadow: none !important;">
+      <li id="VPN" class="container btnContainer">
+         <div class="row collapsible-header titreCollapse">
+            <div class="col s2">
+               <img src="VPN.svg" class="imgLeft">
+            </div>
+            <div class="col s10 s10Right">
+               VPN : help and advice<i class="material-icons imgDroite">chevron_right</i>
+            </div>
+         </div>
+         <div style="background-color:#101B22" class="collapsible-body text">
+            <p><u>Step 1: Choose a reputable free VPN.</u><br><br>
+               We recommend several free VPNs such as: NordVPN, HolaVPN, TunnelBear...<br><br>
+
+               <u>Step 2: Download and install the app.</u><br><br>
+               Visit the website of your chosen VPN, download and install the extension or app on your device.<br><br>
+
+               <u>Step 3: Register and log in.</u><br><br>
+
+               Create a free account using a valid email address, then log in to
+               the application.<br><br>
+
+               <u>Step 4: Select a server and connect.</u><br><br>
+
+               Choose a server (Preferably Norway or Finland) and click the connect button to
+               establish a secure connection.<br><br>
+
+               That's all ! You are now connected via a VPN and your browsing is secure and anonymous.
+            </p>
+         </div>
+      </li>
+
+      <li class="container btnContainer">
+         <div class="row collapsible-header titreCollapse" id="btnInscription">
+            <div class="col s2">
+               <img src="inscription.svg" class="imgLeft">
+            </div>
+            <div class="col s10 s10Right">
+               How do I register ?<i class="material-icons imgDroite">chevron_right</i>
+            </div>
+         </div>
+         <div style="background-color:#101B22" class="collapsible-body text" id="tutorielInscription">
+            <p><u>Step 1 :</u><br><br>
+
+              Go to the following link:<br><br>
+
+  <a href="javascript:void(0);" onclick="ouvreLienEurope()">👉 Use this link 👈</a><br><br>
+
+               then click on the button “Register” or “Create an account”.<br><br>
+
+               <u>Step 2 :</u><br><br>
+
+               Complete the registration form providing the required information, such as your address
+               email, password, username, etc.<br><br>
+
+               <u>Step 3 :</u><br><br>
+
+               Verify your email address by clicking on the confirmation link sent by Stake.<br><br>
+
+               Good luck ! If you want to benefit from a €30 or 200% bonus, simply return to the menu
+               main and click on “Access bonuses”
+            </p>
+         </div>
+      </li>
+
+      <li class="container btnContainer">
+         <div class="row collapsible-header titreCollapse">
+            <div class="col s2">
+               <img src="deposit.svg" class="imgLeft">
+            </div>
+            <div class="col s10 s10Right">
+               How to deposit on Stake ?<i class="material-icons imgDroite">chevron_right</i>
+            </div>
+         </div>
+         <div style="background-color:#101B22" class="collapsible-body text">
+            <p><u>Step 1: Access your account</u><br><br>
+
+               Log in to your account using your login information (email address and password). If you
+               do not have an account here is a tutorial to create one: <button class="btnRedirection" href=""
+                  onclick="clickButton()">Tutorial</button><br>
+               Once logged in, click “Wallet” at the top center of your screen.<br><br>
+
+               <u>Step 2: Choose deposit method</u><br><br>
+
+               On the deposit page, you will see different options for depositing funds. Select method
+               of deposit that suits you best.
+               If you opt for cryptocurrency, copy the deposit address or scan the QR code provided by
+               Stake.bet and transfer the funds from your cryptocurrency wallet.
+               If you choose a credit/debit card you must go through Moonpay, follow the instructions
+               from the stake site.<br><br>
+
+               <u>Step 3: Confirm Deposit</u><br><br>
+
+               Once the transaction is confirmed, the funds will be credited to your Stake account.
+               Note: Deposit processing times may vary depending on the method chosen, so
+               be patient if the transaction takes a little time. If you encounter any problems or have any
+               questions, please feel free to contact Stake Customer Support for assistance.<br><br>
+
+               And There you go ! You have now learned how to deposit funds on Stake.com in 3 steps
+               simple.<br><br>
+
+               Good luck ! If you want to benefit from a €30 or 200% bonus, simply return to the menu main (type
+               "/start") and click on
+               “Access bonuses”.
+            </p>
+         </div>
+      </li>
+
+      <li class="container btnContainer">
+         <div class="row collapsible-header titreCollapse">
+            <div class="col s2">
+               <img src="retirer.svg" class="imgLeft">
+            </div>
+            <div class="col s10 s10Right">
+               How do I withdraw on Stake ?<i class="material-icons imgDroite">chevron_right</i>
+            </div>
+         </div>
+         <div style="background-color:#101B22" class="collapsible-body text">
+            <p><u>Step 1: Access your account</u><br><br>
+
+               Log in to your account using your credentials (email address and password).<br>
+
+               Once logged in, click on “Wallet” at the top center of your screen.<br><br>
+
+
+
+               <u>Step 2: Choose the amount you want to withdraw</u><br><br>
+
+
+
+               By clicking on wallet, then withdraw, you have access to your scales on the site. Choose the one
+               in which you wish to make a withdrawal. Then enter the withdrawal address according to the
+               crypto: BTC, ETH, LTC etc.<br><br>
+
+
+
+               <u>Step 3: Confirm withdrawal</u><br><br>
+
+
+
+               Make sure that it is your address that is marked in the “Address” section. Finally fill it in
+               amount you wish to withdraw.<br><br>
+
+
+
+               And There you go ! You are ready to withdraw, click on the button to proceed with the withdrawal!<br><br>
+
+
+
+               Good game ! The transaction should appear within 5-10 minutes on your crypto wallet.
+            </p>
+         </div>
+      </li>
+   </ul>
+
+   <script type="text/javascript">
+
+      // Fonction pour obtenir les paramètres de l'URL
+      function obtenirParametreUrl(nom) {
+         nom = nom.replace(/[[]/, '\\[').replace(/[\]]/, '\\]');
+         var regex = new RegExp('[\\?&]' + nom + '=([^&#]*)');
+         var résultats = regex.exec(location.search);
+         return résultats === null ? '' : decodeURIComponent(résultats[1].replace(/\+/g, ' '));
+      }
+
+      // Obtenez la valeur du paramètre nommé "afficherBouton" dans l'URL
+      var afficherBouton = obtenirParametreUrl('VPN');
+
+      // Sélectionnez le bouton par son ID
+      var bouton = document.getElementById('VPN');
+
+      // Vérifiez la valeur du paramètre "afficherBouton" et affichez ou masquez le bouton en conséquence
+      if (afficherBouton === 'false') {
+         bouton.style.display = 'none'; // Masquer le bouton
+      }
+
+      // Simulate click function
+      function clickButton() {
+         document.getElementById("btnInscription").click();
+      }
+
+      function ouvreLienEurope() {
+         window.open("http://stake.bet/?c=pay2win")
+      }
+
+     function ouvreLienAmerique() {
+         window.open("https://stake.us/?c=weLzFZ6W")
+      }
+
+   </script>
+
+</body>
+
+</html>
