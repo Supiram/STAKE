@@ -1,0 +1,245 @@
+<html>
+
+<head>
+   <title>Shembulli Materialize Collapsible</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+
+   <style>
+      .titreCollapse {
+         background-color: #1B2B38;
+         background-image: url("fond_btn.svg");
+         background-repeat: no-repeat;
+         margin: 4px;
+         border-bottom: unset !important;
+         color: white;
+         background-position: center;
+         height: 60px;
+         padding-top: 8px;
+         margin-bottom: 8px;
+      }
+
+      li {
+         box-shadow: unset !important;
+      }
+
+      .imgDroite {
+         float: right !important;
+         margin-right: 0 !important;
+      }
+
+      .text {
+         text-align: left;
+         width: 94% !important;
+         margin: auto;
+         color: #FFFFFF;
+         border-bottom: unset !important;
+         margin-top: -8px;
+         border-bottom-left-radius: 10px;
+         border-bottom-right-radius: 10px;
+      }
+
+      p {
+         padding: 1rem !important;
+      }
+
+      .btnContainer {
+         max-width: 360px;
+         min-width: 360px;
+      }
+
+      .imgLeft {
+         margin-top: 3px;
+         text-align: center;
+         float: right;
+      }
+
+      .s10Right {
+         padding-right: 0 !important;
+         padding-left: 0 !important;
+      }
+
+      .btnRedirection {
+         background-color: transparent;
+         border-radius: 5px;
+         border-color: white;
+      }
+   </style>
+</head>
+
+<body style="background-color:#1B2B38">
+   <div>
+      <h5 class="center-align" style="margin:0"><img src="aide.png" style="width: 360px;"></h5>
+   </div>
+   <ul class="collapsible" style="margin-top:-4px;border:unset !important;box-shadow: none !important;">
+      <li id="vpnItem" class="container btnContainer">
+         <div class="row collapsible-header titreCollapse">
+            <div class="col s2">
+               <img src="VPN.svg" class="imgLeft">
+            </div>
+            <div class="col s10 s10Right">
+               VPN : ndihmë dhe këshilla<i class="material-icons imgDroite">chevron_right</i>
+            </div>
+         </div>
+         <div style="background-color:#101B22" class="collapsible-body text">
+            <p><u>Hapi 1: Zgjidhni një VPN të njohur falas.</u><br><br>
+               Ne rekomandojmë disa VPN falas, si: <a href="https://hola.org/">HolaVPN</a>,
+               TunnelBear...<br><br>
+
+               <u>Hapi 2: Shkarkoni dhe instaloni aplikacionin.</u><br><br>
+               Vizitoni faqen e VPN-së që keni zgjedhur, pastaj shkarkoni dhe instaloni aplikacionin ose shtesën në pajisjen tuaj.<br><br>
+
+               <u>Hapi 3: Regjistrohuni dhe lidheni.</u><br><br>
+               Krijoni një llogari falas me një email të vlefshëm, pastaj lidheni në aplikacion.<br><br>
+
+               <u>Hapi 4: Zgjidhni një server dhe lidheni.</u><br><br>
+               Zgjidhni një server (më mirë në Norvegji), pastaj klikoni butonin e lidhjes për të krijuar një lidhje të sigurt.<br><br>
+
+               Të gjitha! Tani jeni të lidhur përmes VPN dhe navigimi juaj është i sigurt dhe anonim.
+            </p>
+         </div>
+      </li>
+
+      <li id="inscriptionItem" class="container btnContainer">
+         <div class="row collapsible-header titreCollapse" id="btnInscription">
+            <div class="col s2">
+               <img src="inscription.svg" class="imgLeft">
+            </div>
+            <div class="col s10 s10Right">
+               Si të regjistroheni?<i class="material-icons imgDroite">chevron_right</i>
+            </div>
+         </div>
+         <div style="background-color:#101B22" class="collapsible-body text" id="tutorielInscription">
+            <p><u>Hapi 1 :</u><br><br>
+
+               Shkoni në faqen: <a href="" onclick="ouvreLienAffi()">Stake.bet</a> dhe klikoni
+               butonin "Regjistrohu" ose "Krijo llogari".<br><br>
+
+               <u>Hapi 2 :</u><br><br>
+
+               Plotësoni formularin e regjistrimit duke dhënë informacionet e kërkuara, si email, fjalëkalim, emër përdoruesi, etj.<br><br>
+
+               <u>Hapi 3 :</u><br><br>
+
+               Verifikoni email-in tuaj duke klikuar linkun e konfirmimit që dërgohet nga Stake.<br><br>
+
+               Fat të mbarë! Nëse dëshironi të përfitoni nga bonusi 30€ ose 200%, mjafton të ktheheni në menu dhe të klikoni "Akseso bonuset".
+            </p>
+         </div>
+      </li>
+
+      <li id="depotItem" class="container btnContainer">
+         <div class="row collapsible-header titreCollapse">
+            <div class="col s2">
+               <img src="deposit.svg" class="imgLeft">
+            </div>
+            <div class="col s10 s10Right">
+               Si të depozitoni në Stake?<i class="material-icons imgDroite">chevron_right</i>
+            </div>
+         </div>
+         <div style="background-color:#101B22" class="collapsible-body text">
+            <p><u>Hapi 1: Hyni në llogarinë tuaj</u><br><br>
+
+               Lidheni në llogarinë tuaj me email dhe fjalëkalim. Nëse nuk keni ende llogari, përdorni këtë <button class="btnRedirection" href=""
+                  onclick="clickButton()">udhëzues</button><br>
+               Pasi të lidheni, klikoni "Portofoli" në krye të ekranit.<br><br>
+
+               <u>Hapi 2: Zgjidhni mënyrën e depozitës</u><br><br>
+
+               Në faqen e depozitës, do të shihni opsione të ndryshme. Zgjidhni metodën që ju përshtatet më mirë:<br><br>
+               - Kriptomonedhë: kopjoni adresën e depozitës ose skanoni kodin QR, pastaj transferoni fondet nga portofoli juaj.<br>
+               - Kartë krediti/debiti: do të përdorni Moonpay. Ndiqni udhëzimet e shfaqura.<br><br>
+
+               <u>Hapi 3: Konfirmoni depozitën</u><br><br>
+
+               Pasi transaksioni të konfirmohet, fondet do të kreditohet në llogarinë tuaj.
+               Shënim: Koha e përpunimit mund të ndryshojë sipas metodës së zgjedhur.<br><br>
+
+               Të gjitha! Tani dini si të depozitoni fonde në 3 hapa të thjeshtë.<br><br>
+            </p>
+         </div>
+      </li>
+
+      <li id="retraitItem" class="container btnContainer">
+         <div class="row collapsible-header titreCollapse">
+            <div class="col s2">
+               <img src="retirer.svg" class="imgLeft">
+            </div>
+            <div class="col s10 s10Right">
+               Si të tërhiqni në Stake?<i class="material-icons imgDroite">chevron_right</i>
+            </div>
+         </div>
+         <div style="background-color:#101B22" class="collapsible-body text">
+            <p><u>Hapi 1: Hyni në llogarinë tuaj</u><br><br>
+
+               Lidheni me email dhe fjalëkalim.<br>
+               Pastaj klikoni "Portofoli" në krye të ekranit.<br><br>
+
+               <u>Hapi 2: Zgjidhni balancën për të tërhequr</u><br><br>
+
+               Në menu "Portofoli", klikoni "Tërhiq" për të parë balancat tuaja.
+               Zgjidhni atë nga e cila dëshironi të tërhiqni.
+               Pastaj fusni adresën e tërheqjes për kriptomonedhën e zgjedhur (BTC, ETH, LTC, etj.).<br><br>
+
+               <u>Hapi 3: Konfirmoni tërheqjen</u><br><br>
+
+               Sigurohuni që adresa në fushën "Adresa" është e juaja.
+               Futni shumën që dëshironi të tërhiqni dhe klikoni butonin për të konfirmuar.<br><br>
+
+               Të gjitha! Tani jeni gati të tërhiqni fondet.
+               Transaksioni do të shfaqet në portofolin tuaj crypto brenda 5-10 minutash.<br>
+               Mirë bërë!
+            </p>
+         </div>
+      </li>
+   </ul>
+
+   <script type="text/javascript">
+      function clickButton() {
+         document.getElementById("btnInscription").click();
+      }
+
+      function ouvreLienAffi() {
+         window.open("https://stake.bet/?c=LaMenace");
+      }
+
+      function changeLanguage() {
+         const language = document.getElementById('languageSelect').value;
+         const elements = document.querySelectorAll('.collapsible-body');
+
+         elements.forEach(element => {
+            if (language === 'fr') {
+               element.innerHTML = element.getAttribute('data-fr');
+            } else if (language === 'en') {
+               element.innerHTML = element.getAttribute('data-en');
+            } else if (language === 'no') {
+               element.innerHTML = element.getAttribute('data-no');
+            } else if (language === 'al') {
+               element.innerHTML = element.getAttribute('data-al');
+            }
+         });
+      }
+
+      window.onload = function () {
+         const urlParams = new URLSearchParams(window.location.search);
+         const item = urlParams.get('item');
+
+         if (item === 'vpn') {
+            document.getElementById('vpnItem').querySelector('.collapsible-header').click();
+         } else if (item === 'inscription') {
+            document.getElementById('inscriptionItem').querySelector('.collapsible-header').click();
+         } else if (item === 'depot') {
+            document.getElementById('depotItem').querySelector('.collapsible-header').click();
+         } else if (item === 'retrait') {
+            document.getElementById('retraitItem').querySelector('.collapsible-header').click();
+         }
+         changeLanguage();
+      }
+   </script>
+
+</body>
+
+</html>
