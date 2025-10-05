@@ -1,0 +1,338 @@
+<html>
+
+<head>
+   <title>The Materialize Collapsible Example</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+
+   <style>
+      .titreCollapse {
+         background-color: #1B2B38;
+         background-image: url("fond_btn.svg");
+         background-repeat: no-repeat;
+         margin: 4px;
+         border-bottom: unset !important;
+         color: white;
+         background-position: center;
+         height: 60px;
+         padding-top: 8px;
+         margin-bottom: 8px;
+      }
+
+      li {
+         box-shadow: unset !important;
+      }
+
+      .imgDroite {
+         float: right !important;
+         margin-right: 0 !important;
+      }
+
+      .text {
+         text-align: left;
+         width: 94% !important;
+         margin: auto;
+         color: #FFFFFF;
+         border-bottom: unset !important;
+         margin-top: -8px;
+         border-bottom-left-radius: 10px;
+         border-bottom-right-radius: 10px;
+      }
+
+      p {
+         padding: 1rem !important;
+      }
+
+      .btnContainer {
+         max-width: 360px;
+         min-width: 360px;
+      }
+
+      .imgLeft {
+         margin-top: 3px;
+         text-align: center;
+         float: right;
+      }
+
+      .s10Right {
+         padding-right: 0 !important;
+         padding-left: 0 !important;
+      }
+
+      .btnRedirection {
+         background-color: transparent;
+         border-radius: 5px;
+         border-color: white;
+      }
+
+      .selected {
+         border-color: green !important;
+      }
+   </style>
+</head>
+
+<body style="background-color:#1B2B38">
+   <div>
+      <h5 class="center-align" style="margin:0"><img src="aide.png" style="width: 360px;"></h5>
+   </div>
+   <div style="text-align: center; width: 300px; margin: 20px auto;" class="center-align">
+      <label for="languageSelect" data-fr="Choisissez votre langue :" data-en="Choose your language:"
+         data-no="Velg ditt språk:">Choisissez votre langue :</label>
+      <div>
+         <img src="france.png" alt="Français" onclick="setLanguage('fr')"
+            style="cursor: pointer; width: 60px; height: 40px; margin: 5px; border: 2px solid white; border-radius: 5px;"
+            class="selected">
+         <img src="england.png" alt="Anglais" onclick="setLanguage('en')"
+            style="cursor: pointer; width: 60px; height: 40px; margin: 5px; border: 2px solid white; border-radius: 5px;">
+      </div>
+   </div>
+   <ul class="collapsible" style="margin-top:-4px;border:unset !important;box-shadow: none !important;">
+      <li id="vpnItem" class="container btnContainer">
+         <div class="row collapsible-header titreCollapse">
+            <div class="col s2">
+               <img src="VPN.svg" class="imgLeft">
+            </div>
+            <div class="col s10 s10Right" data-fr="VPN : aide et conseil" data-en="VPN: Help and Advice"
+               data-no="VPN: Hjelp og råd">
+               VPN : aide et conseil<i class="material-icons imgDroite">chevron_right</i>
+            </div>
+         </div>
+         <div style="background-color:#101B22" class="collapsible-body text"
+            data-fr="<p><u>Étape 1 : Choisissez un VPN gratuit réputé.</u><br><br>Nous vous conseillons plusieurs VPN gratuits tels que : <a href='https://hola.org/'>HolaVPN</a>, TunnelBear...<br><br><u>Étape 2 : Téléchargez et installez l'application.</u><br><br>Visitez le site web du VPN choisi, téléchargez et installez l'extension ou l'application sur votre appareil.<br><br><u>Étape 3 : Inscrivez-vous et connectez-vous.</u><br><br>Créez un compte gratuit en utilisant une adresse e-mail valide, puis connectez-vous à l'application.<br><br><u>Étape 4 : Sélectionnez un serveur et connectez-vous.</u><br><br>Choisissez un serveur (de préférence en Norvège) et cliquez sur le bouton de connexion pour établir une connexion sécurisée.<br><br>C'est tout ! Vous êtes maintenant connecté via un VPN et votre navigation est sécurisée et anonyme.</p>"
+            data-en="<p><u>Step 1: Choose a reputable free VPN.</u><br><br>We recommend several free VPNs such as: <a href='https://hola.org/'>HolaVPN</a>, TunnelBear...<br><br><u>Step 2: Download and install the application.</u><br><br>Visit the chosen VPN's website, download and install the extension or application on your device.<br><br><u>Step 3: Sign up and log in.</u><br><br>Create a free account using a valid email address, then log in to the application.<br><br><u>Step 4: Select a server and connect.</u><br><br>Choose a server (preferably in Norway) and click the connect button to establish a secure connection.<br><br>That's it! You are now connected via a VPN and your browsing is secure and anonymous.</p>"
+            data-no="<p><u>Trinn 1: Velg en anerkjent gratis VPN.</u><br><br>Vi anbefaler flere gratis VPN-er som: <a href='https://hola.org/'>HolaVPN</a>, TunnelBear...<br><br><u>Trinn 2: Last ned og installer applikasjonen.</u><br><br>Besøk den valgte VPNs nettsted, last ned og installer utvidelsen eller applikasjonen på enheten din.<br><br><u>Trinn 3: Registrer deg og logg inn.</u><br><br>Opprett en gratis konto ved å bruke en gyldig e-postadresse, og logg deretter inn på applikasjonen.<br><br><u>Trinn 4: Velg en server og koble til.</u><br><br>Velg en server (helst i Norge) og klikk på koble til-knappen for å etablere en sikker tilkobling.<br><br>Det er det! Du er nå koblet til via en VPN, og surfingen din er sikker og anonym.</p>">
+            <p><u>Étape 1 : Choisissez un VPN gratuit réputé.</u><br><br>
+               Nous vous conseillons plusieurs VPN gratuits tels que : <a href="https://hola.org/">HolaVPN</a>,
+               TunnelBear...<br><br>
+
+               <u>Étape 2 : Téléchargez et installez l'application.</u><br><br>
+               Visitez le site web du VPN choisi, téléchargez et installez l'extension ou l'application sur votre
+               appareil.<br><br>
+
+               <u>Étape 3 : Inscrivez-vous et connectez-vous.</u><br><br>
+               Créez un compte gratuit en utilisant une adresse e-mail valide, puis connectez-vous à
+               l'application.<br><br>
+
+               <u>Étape 4 : Sélectionnez un serveur et connectez-vous.</u><br><br>
+               Choisissez un serveur (de préférence en Norvège) et cliquez sur le bouton de connexion
+               pour
+               établir une connexion sécurisée.<br><br>
+
+               C'est tout ! Vous êtes maintenant connecté via un VPN et votre navigation est sécurisée et anonyme.
+            </p>
+         </div>
+      </li>
+
+      <li id="inscriptionItem" class="container btnContainer">
+         <div class="row collapsible-header titreCollapse" id="btnInscription">
+            <div class="col s2">
+               <img src="inscription.svg" class="imgLeft">
+            </div>
+            <div class="col s10 s10Right" data-fr="Comment s'inscrire ?" data-en="How to sign up?"
+               data-no="Hvordan registrere seg?">
+               Comment s'inscrire ?<i class="material-icons imgDroite">chevron_right</i>
+            </div>
+         </div>
+         <div style="background-color:#101B22" class="collapsible-body text" id="tutorielInscription"
+            data-fr="<p><u>Étape 1 :</u><br><br>Rendez-vous sur le lien suivant : <a href='' onclick='ouvreLienAffi()'>Stake.bet</a> puis cliquez sur le bouton 'S'inscrire' ou 'Créer un compte'.<br><br><u>Étape 2 :</u><br><br>Remplissez le formulaire d'inscription en fournissant les informations requises, telles que votre adresse e-mail, mot de passe, nom d'utilisateur, etc.<br><br><u>Étape 3 :</u><br><br>Vérifiez votre adresse e-mail en cliquant sur le lien de confirmation envoyé par Stake.<br><br>Bonne chance ! Si vous souhaitez profiter d'un bonus de 30€ ou 200%, il suffit de retourner au menu principal et de cliquer sur 'Accéder aux bonus'.</p>"
+            data-en="<p><u>Step 1:</u><br><br>Go to the following link: <a href='' onclick='ouvreLienAffi()'>Stake.bet</a> then click on the 'Sign Up' or 'Create Account' button.<br><br><u>Step 2:</u><br><br>Fill out the registration form by providing the required information, such as your email address, password, username, etc.<br><br><u>Step 3:</u><br><br>Verify your email address by clicking on the confirmation link sent by Stake.<br><br>Good luck! If you want to enjoy a bonus of €30 or 200%, just return to the main menu and click on 'Access bonuses'.</p>"
+            data-no="<p><u>Trinn 1:</u><br><br>Gå til følgende lenke: <a href='' onclick='ouvreLienAffi()'>Stake.bet</a> og klikk deretter på 'Registrer deg' eller 'Opprett konto'-knappen.<br><br><u>Trinn 2:</u><br><br>Fyll ut registreringsskjemaet ved å oppgi den nødvendige informasjonen, for eksempel e-postadresse, passord, brukernavn, etc.<br><br><u>Trinn 3:</u><br><br>Bekreft e-postadressen din ved å klikke på bekreftelseslenken sendt av Stake.<br><br>Lykke til! Hvis du vil nyte en bonus på €30 eller 200%, bare gå tilbake til hovedmenyen og klikk på 'Få tilgang til bonuser'.</p>">
+            <p><u>Étape 1 :</u><br><br>
+
+               Rendez-vous sur le lien suivant : <a href="" onclick="ouvreLienAffi()">Stake.bet</a> puis cliquez sur
+               le
+               bouton "S'inscrire" ou "Créer un compte".<br><br>
+
+               <u>Étape 2 :</u><br><br>
+
+               Remplissez le formulaire d'inscription en fournissant les informations requises, telles que votre adresse
+               e-mail, mot de passe, nom d'utilisateur, etc.<br><br>
+
+               <u>Étape 3 :</u><br><br>
+
+               Vérifiez votre adresse e-mail en cliquant sur le lien de confirmation envoyé par Stake.<br><br>
+
+               Bonne chance ! Si vous souhaitez profiter d'un bonus de 30€ ou 200%, il suffit de retourner au menu
+               principal et de cliquer sur "Accéder aux bonus".
+            </p>
+         </div>
+      </li>
+
+      <li id="depotItem" class="container btnContainer">
+         <div class="row collapsible-header titreCollapse">
+            <div class="col s2">
+               <img src="deposit.svg" class="imgLeft">
+            </div>
+            <div class="col s10 s10Right" data-fr="Comment déposer sur Stake ?" data-en="How to deposit on Stake?"
+               data-no="Hvordan sette inn på Stake?">
+               Comment déposer sur Stake ?<i class="material-icons imgDroite">chevron_right</i>
+            </div>
+         </div>
+         <div style="background-color:#101B22" class="collapsible-body text"
+            data-fr="<p><u>Étape 1 : Accédez à votre compte</u><br><br>Connectez-vous à votre compte en utilisant vos identifiants (adresse e-mail et mot de passe). Si vous n'avez pas de compte, voici un tutoriel pour en créer un : <button class='btnRedirection' href='' onclick='clickButton()'>Tutoriel</button><br>Une fois connecté, cliquez sur 'Portefeuille' en haut au centre de votre écran.<br><br><u>Étape 2 : Choisissez la méthode de dépôt</u><br><br>Sur la page de dépôt, vous verrez différentes options pour déposer des fonds. Sélectionnez la méthode de dépôt qui vous convient le mieux. Si vous optez pour une cryptomonnaie, copiez l'adresse de dépôt ou scannez le code QR fourni par Stake.bet et transférez les fonds depuis votre portefeuille de cryptomonnaie. Si vous choisissez une carte de crédit/débit, vous devez passer par Moonpay. Suivez les instructions depuis le site de Stake.<br><br><u>Étape 3 : Confirmez le dépôt</u><br><br>Une fois que la transaction est confirmée, les fonds seront crédités sur votre compte. Remarque : Les délais de traitement des dépôts peuvent varier en fonction de la méthode choisie, donc soyez patient si la transaction prend un peu de temps. Si vous rencontrez des problèmes ou avez des questions, n'hésitez pas à contacter le support client de Stake pour obtenir de l'aide.<br><br>Et voilà ! Vous avez maintenant appris comment déposer des fonds sur Stake.bet en 3 étapes simples.<br><br></p>"
+            data-en="<p><u>Step 1: Access your account</u><br><br>Log in to your account using your credentials (email address and password). If you don't have an account, here's a tutorial to create one: <button class='btnRedirection' href='' onclick='clickButton()'>Tutorial</button><br>Once logged in, click on 'Wallet' at the top center of your screen.<br><br><u>Step 2: Choose your deposit method</u><br><br>On the deposit page, you will see different options to deposit funds. Select the deposit method that suits you best. If you opt for cryptocurrency, copy the deposit address or scan the QR code provided by Stake.bet and transfer the funds from your cryptocurrency wallet. If you choose a credit/debit card, you will need to go through Moonpay. Follow the instructions from the Stake website.<br><br><u>Step 3: Confirm the deposit</u><br><br>Once the transaction is confirmed, the funds will be credited to your account. Note: Processing times for deposits may vary depending on the method chosen, so be patient if the transaction takes a bit of time. If you encounter any problems or have questions, don't hesitate to contact Stake customer support for help.<br><br>That's it! You have now learned how to deposit funds on Stake.bet in 3 simple steps.<br><br></p>"
+            data-no="<p><u>Trinn 1: Få tilgang til kontoen din</u><br><br>Logg inn på kontoen din ved å bruke legitimasjonen din (e-postadresse og passord).<br>Når du er logget inn, klikk på 'Lommebok' øverst i midten av skjermen.<br><br><u>Trinn 2: Velg innskuddsmetode</u><br><br>På innskuddssiden vil du se forskjellige alternativer for å sette inn penger. Velg innskuddsmetoden som passer deg best. Hvis du velger kryptovaluta, kopier innskuddsadressen eller skann QR-koden som tilbys av Stake.bet og overfør midlene fra kryptovaluta-lommeboken din. Hvis du velger kreditt-/debetkort, må du gå gjennom Moonpay. Følg instruksjonene fra Stake-nettstedet.<br><br><u>Trinn 3: Bekreft innskuddet</u><br><br>Når transaksjonen er bekreftet, vil midlene bli kreditert til kontoen din. Merk: Behandlingstiden for innskudd kan variere avhengig av metoden som er valgt, så vær tålmodig hvis transaksjonen tar litt tid. Hvis du støter på problemer eller har spørsmål, ikke nøl med å kontakte Stake kundeservice for hjelp.<br><br>Det er det! Du har nå lært hvordan du setter inn penger på Stake.bet i 3 enkle trinn.<br><br></p>">
+            <p><u>Étape 1 : Accédez à votre compte</u><br><br>
+
+               Connectez-vous à votre compte en utilisant vos identifiants (adresse e-mail et mot de passe). Si vous
+               n'avez pas de compte, voici un tutoriel pour en créer un : <button class="btnRedirection" href=""
+                  onclick="clickButton()">Tutoriel</button><br>
+               Une fois connecté, cliquez sur "Portefeuille" en haut au centre de votre écran.<br><br>
+
+               <u>Étape 2 : Choisissez la méthode de dépôt</u><br><br>
+
+               Sur la page de dépôt, vous verrez différentes options pour déposer des fonds. Sélectionnez la méthode
+               de dépôt qui vous convient le mieux.
+               Si vous optez pour une cryptomonnaie, copiez l'adresse de dépôt ou scannez le code QR fourni par
+               Stake.bet et transférez les fonds depuis votre portefeuille de cryptomonnaie.
+               Si vous choisissez une carte de crédit/débit, vous devez passer par Moonpay. Suivez les instructions
+               depuis le site de .<br><br>
+
+               <u>Étape 3 : Confirmez le dépôt</u><br><br>
+
+               Une fois que la transaction est confirmée, les fonds seront crédités sur votre compte .
+               Remarque : Les délais de traitement des dépôts peuvent varier en fonction de la méthode choisie, donc
+               soyez patient si la transaction prend un peu de temps. Si vous rencontrez des problèmes ou avez des
+               questions, n'hésitez pas à contacter le support client de pour obtenir de l'aide.<br><br>
+
+               Et voilà ! Vous avez maintenant appris comment déposer des fonds sur Stake.bet en 3 étapes
+               simples.<br><br>
+            </p>
+         </div>
+      </li>
+
+      <li id="retraitItem" class="container btnContainer">
+         <div class="row collapsible-header titreCollapse">
+            <div class="col s2">
+               <img src="retirer.svg" class="imgLeft">
+            </div>
+            <div class="col s10 s10Right" data-fr="Comment retirer sur Stake ?" data-en="How to withdraw on Stake?"
+               data-no="Hvordan ta ut på Stake?">
+               Comment retirer sur Stake ?<i class="material-icons imgDroite">chevron_right</i>
+            </div>
+         </div>
+         <div style="background-color:#101B22" class="collapsible-body text"
+            data-fr="<p><u>Étape 1 : Accédez à votre compte</u><br><br>Connectez-vous à votre compte en utilisant vos identifiants (adresse e-mail et mot de passe).<br>Une fois connecté, cliquez sur 'Portefeuille' en haut au centre de votre écran.<br><br><u>Étape 2 : Choisissez la balance que vous souhaitez retirer</u><br><br>En cliquant sur 'Portefeuille', puis 'Retirer', vous avez accès à vos balances sur le site. Choisissez celle dans laquelle vous souhaitez effectuer un retrait. Ensuite, renseignez l'adresse de retrait en fonction de la cryptomonnaie : BTC, ETH, LTC, etc.<br><br><u>Étape 3 : Confirmez le retrait</u><br><br>Vérifiez bien que c'est votre adresse qui est marquée dans la section 'Adresse'. Enfin, renseignez le montant que vous souhaitez retirer.<br><br>Et voilà ! Vous êtes prêt à retirer, cliquez sur le bouton pour procéder au retrait !<br><br>Bien joué ! La transaction devrait apparaître sous 5-10 minutes sur votre portefeuille crypto.</p>"
+            data-en="<p><u>Step 1: Access your account</u><br><br>Log in to your account using your credentials (email address and password).<br>Once logged in, click on 'Wallet' at the top center of your screen.<br><br><u>Step 2: Choose the balance you want to withdraw</u><br><br>By clicking on 'Wallet', then 'Withdraw', you have access to your balances on the site. Choose the one from which you want to make a withdrawal. Then, enter the withdrawal address according to the cryptocurrency: BTC, ETH, LTC, etc.<br><br><u>Step 3: Confirm the withdrawal</u><br><br>Make sure that your address is listed in the 'Address' section. Finally, enter the amount you wish to withdraw.<br><br>That's it! You are ready to withdraw, click the button to proceed with the withdrawal!<br><br>Well done! The transaction should appear within 5-10 minutes on your crypto wallet.</p>"
+            data-no="<p><u>Trinn 1: Få tilgang til kontoen din</u><br><br>Logg inn på kontoen din ved å bruke legitimasjonen din (e-postadresse og passord).<br>Når du er logget inn, klikk på 'Lommebok' øverst i midten av skjermen.<br><br><u>Trinn 2: Velg saldoen du vil ta ut</u><br><br>Ved å klikke på 'Lommebok', deretter 'Ta ut', får du tilgang til saldoene dine på nettstedet. Velg den du vil gjøre et uttak fra. Deretter, oppgi uttaksadressen i henhold til kryptovalutaen: BTC, ETH, LTC, etc.<br><br><u>Trinn 3: Bekreft uttaket</u><br><br>Forsikre deg om at adressen din er oppført i 'Adresse'-delen. Til slutt, oppgi beløpet du ønsker å ta ut.<br><br>Det er det! Du er klar til å ta ut, klikk på knappen for å fortsette med uttaket!<br><br>Bra jobbet! Transaksjonen bør vises innen 5-10 minutter på kryptolommeboken din.</p>">
+            <p><u>Étape 1 : Accédez à votre compte</u><br><br>
+
+               Connectez-vous à votre compte en utilisant vos identifiants (adresse e-mail et mot de passe).<br>
+
+               Une fois connecté, cliquez sur "Portefeuille" en haut au centre de votre écran.<br><br>
+
+               <u>Étape 2 : Choisissez la balance que vous souhaitez retirer</u><br><br>
+
+               En cliquant sur "Portefeuille", puis "Retirer", vous avez accès à vos balances sur le site. Choisissez
+               celle
+               dans laquelle vous souhaitez effectuer un retrait. Ensuite, renseignez l'adresse de retrait en fonction
+               de la
+               cryptomonnaie : BTC, ETH, LTC, etc.<br><br>
+
+               <u>Étape 3 : Confirmez le retrait</u><br><br>
+
+               Vérifiez bien que c'est votre adresse qui est marquée dans la section "Adresse". Enfin, renseignez le
+               montant que vous souhaitez retirer.<br><br>
+
+               Et voilà ! Vous êtes prêt à retirer, cliquez sur le bouton pour procéder au retrait !<br><br>
+
+               Bien joué ! La transaction devrait apparaître sous 5-10 minutes sur votre portefeuille crypto.
+            </p>
+         </div>
+      </li>
+   </ul>
+
+   <script type="text/javascript">
+      // Initialisation du composant collapsible avec la version 1.0.0 de Materialize
+      document.addEventListener('DOMContentLoaded', function () {
+         var elems = document.querySelectorAll('.collapsible');
+         var instances = M.Collapsible.init(elems);
+         console.log("Collapsible initialisé avec la version 1.0.0");
+      });
+
+      // Simulate click function
+      function clickButton() {
+         document.getElementById("btnInscription").click();
+      }
+
+      function ouvreLienAffi() {
+         window.open("https://stake.bet/?c=REKTKAZ");
+      }
+
+      function setLanguage(language) {
+         const elements = document.querySelectorAll('.collapsible-body');
+         const flags = document.querySelectorAll('img[alt]');
+         const titles = document.querySelectorAll('.col.s10.s10Right');
+         const languageLabel = document.querySelector('label[for="languageSelect"]');
+
+         flags.forEach(flag => {
+            flag.classList.remove('selected');
+         });
+
+         if (language === 'fr') {
+            document.querySelector('img[alt="Français"]').classList.add('selected');
+         } else if (language === 'en') {
+            document.querySelector('img[alt="Anglais"]').classList.add('selected');
+         } else if (language === 'no') {
+            document.querySelector('img[alt="Norvégien"]').classList.add('selected');
+         }
+
+         elements.forEach(element => {
+            if (language === 'fr') {
+               element.innerHTML = element.getAttribute('data-fr');
+            } else if (language === 'en') {
+               element.innerHTML = element.getAttribute('data-en');
+            } else if (language === 'no') {
+               element.innerHTML = element.getAttribute('data-no');
+            }
+         });
+
+         titles.forEach(title => {
+            if (language === 'fr') {
+               title.innerHTML = title.getAttribute('data-fr') + '<i class="material-icons imgDroite">chevron_right</i>';
+            } else if (language === 'en') {
+               title.innerHTML = title.getAttribute('data-en') + '<i class="material-icons imgDroite">chevron_right</i>';
+            } else if (language === 'no') {
+               title.innerHTML = title.getAttribute('data-no') + '<i class="material-icons imgDroite">chevron_right</i>';
+            }
+         });
+
+         if (language === 'fr') {
+            languageLabel.innerHTML = languageLabel.getAttribute('data-fr');
+         } else if (language === 'en') {
+            languageLabel.innerHTML = languageLabel.getAttribute('data-en');
+         } else if (language === 'no') {
+            languageLabel.innerHTML = languageLabel.getAttribute('data-no');
+         }
+      }
+
+      window.onload = function () {
+         const urlParams = new URLSearchParams(window.location.search);
+         const item = urlParams.get('item');
+
+         if (item === 'vpn') {
+            document.getElementById('vpnItem').querySelector('.collapsible-header').click();
+         } else if (item === 'inscription') {
+            document.getElementById('inscriptionItem').querySelector('.collapsible-header').click();
+         } else if (item === 'depot') {
+            document.getElementById('depotItem').querySelector('.collapsible-header').click();
+         } else if (item === 'retrait') {
+            document.getElementById('retraitItem').querySelector('.collapsible-header').click();
+         }
+         setLanguage('fr'); // Initialize with default language
+      }
+
+      function testCollapsible() {
+         const collapsibleItems = document.querySelectorAll('.collapsible-header');
+         collapsibleItems.forEach(item => {
+            item.click();
+         });
+      }
+   </script>
+
+</body>
+
+</html>
