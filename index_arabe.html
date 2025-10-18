@@ -1,0 +1,283 @@
+<html lang="ar" dir="rtl">
+
+<head>
+   <title>مثال على القائمة القابلة للطي باستخدام Materialize</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+
+   <style>
+      body {
+         direction: rtl;
+         text-align: right;
+      }
+
+      .titreCollapse {
+         background-color: #1B2B38;
+         background-image: url("fond_btn.svg");
+         background-repeat: no-repeat;
+         margin: 4;
+         border-bottom: unset !important;
+         color: white;
+         background-position: center;
+         height: 60px;
+         padding-top: 8px;
+         margin-bottom: 8;
+      }
+
+      li {
+         box-shadow: unset !important;
+      }
+
+      .imgDroite {
+         float: left !important;
+         margin-left: 0 !important;
+      }
+
+      .text {
+         text-align: right;
+         width: 94% !important;
+         margin: auto;
+         color: #FFFFFF;
+         border-bottom: unset !important;
+         margin-top: -8px;
+         border-bottom-left-radius: 10px;
+         border-bottom-right-radius: 10px;
+      }
+
+      p {
+         padding: 1rem !important;
+      }
+
+      .btnContainer {
+         max-width: 360;
+         min-width: 360;
+      }
+
+      .imgLeft {
+         margin-top: 3;
+         text-align: center;
+         float: left;
+      }
+
+      .s10Right {
+         padding-right: 0 !important;
+         padding-left: 0 !important;
+      }
+   </style>
+</head>
+
+<body style="background-color:#1B2B38">
+   <div>
+      <h5 class="center-align" style="margin:0"><img src="logo.png" style="width: 360;"></h5>
+   </div>
+   <ul class="collapsible" style="margin-top:-4px;border:unset !important;box-shadow: none !important;">
+
+      <li class="container btnContainer">
+         <div class="row collapsible-header titreCollapse">
+            <div class="col s2">
+               <img src="etoile.svg" class="imgLeft">
+            </div>
+            <div class="col s10 s10Right">
+               الرتب VIP&nbsp;&nbsp;&nbsp;&nbsp;<img src="benefits.svg" style="vertical-align: middle;"><i
+                  class="material-icons imgDroite">chevron_right</i>
+            </div>
+         </div>
+         <div style="background-color:#101B22" class="collapsible-body text">
+            <p>برنامج الـVIP في Stake شامل جداً. يتكون من <b>10 رتب.</b><br><br>
+
+               من الفضة إلى الألماس، يمكنك الاستفادة من العديد من المكافآت وكذلك قناة خاصة على تليجرام.<br><br>
+
+               <img src="rank.png" style="width: 304;"><br><br>
+
+               إذا كنت ترغب في معرفة المزيد عن البرنامج، يمكنك الاطلاع على هذا المقال.<br><br><a
+                  href="https://stake.bet/fr/vip-club#vip-rewards" target="_blank"><img src="vip_rank.png"
+                     style="width: 300px;"></a>
+
+            </p>
+         </div>
+      </li>
+
+      <li class="container btnContainer">
+         <div class="row collapsible-header titreCollapse">
+            <div class="col s2">
+               <img src="recharge_img.svg" class="imgLeft">
+            </div>
+            <div class="col s10 s10Right">
+               عمليات الشحن&nbsp;&nbsp;&nbsp;&nbsp;<img src="bonus.svg" style="vertical-align: middle;"><i
+                  class="material-icons imgDroite">chevron_right</i>
+            </div>
+         </div>
+         <div style="background-color:#101B22" class="collapsible-body text">
+            <p>في Stake، الشحن هو ميزة تمنحك مبلغاً معيناً من المال يمكنك المطالبة به في فترات محددة.<br><br>
+               <img src="recharge.png" style="width: 304;">
+               <br><br>
+               غالباً ما تكون هذه الفترات مرة كل <b>24 ساعة.</b><br><br>
+
+               بمجرد أن تطالب بأول شحن لك، <b>يجب عليك الانتظار 24 ساعة</b> قبل أن يصبح الشحن التالي متاحاً.<br><br>
+
+               لاحظ أنك لا يمكنك تجميع عمليات الشحن، وإذا فاتتك واحدة، فلن يمكنك استعادتها.
+            </p>
+         </div>
+      </li>
+
+      <li class="container btnContainer">
+         <div class="row collapsible-header titreCollapse">
+            <div class="col s2">
+               <img src="rakeback_titre.svg" class="imgLeft">
+            </div>
+            <div class="col s10 s10Right">
+               ميزة Rakeback&nbsp;&nbsp;&nbsp;&nbsp;<img src="bonus.svg" style="vertical-align: middle;"><i
+                  class="material-icons imgDroite">chevron_right</i>
+            </div>
+         </div>
+         <div style="background-color:#101B22" class="collapsible-body text">
+            <p>في Stake، بمجرد أن تضع رهاناً، ستستعيد جزءاً منه تلقائياً. ويمكنك استلام هذا المكافأة الإضافية متى شئت!<br><br>
+               <img src="rakeback.png" style="width: 304;"><br><br>
+               كلما راهنت أكثر على الموقع، زادت نسبة الـRakeback الخاصة بك. ومع تقدمك في الرتب VIP، تزداد النسبة أيضاً.<br><br>
+
+               ميزة الـRakeback متاحة بدءاً من رتبة البرونز. يمكنك استعادة جزء من جميع رهاناتك قبل رتبة VIP.
+            </p>
+         </div>
+      </li>
+
+      <li class="container btnContainer">
+         <div class="row collapsible-header titreCollapse">
+            <div class="col s2">
+               <img src="weekly_img.svg" class="imgLeft">
+            </div>
+            <div class="col s10 s10Right">
+               مكافأة أسبوعية&nbsp;&nbsp;&nbsp;&nbsp;<img src="bonus.svg" style="vertical-align: middle;"><i
+                  class="material-icons imgDroite">chevron_right</i>
+            </div>
+         </div>
+         <div style="background-color:#101B22" class="collapsible-body text">
+            <p>
+               بالإضافة إلى المكافأة الشهرية، تمنح Stake مكافأة أسبوعية لتكافئ اللاعبين النشطين.<br><br>
+
+               <b>من المؤهل للحصول على هذه المكافأة؟</b><br>
+               جميع اللاعبين برتبة برونز أو أعلى مؤهلون دون استثناء.<br><br>
+
+               <b>متى يتم توزيع المكافأة؟</b><br>
+               كل يوم سبت الساعة 14:30 (UTC+2).<br><br>
+               <img src="weekly.png" style="width: 304;"><br><br>
+
+               قد يحدث تأخير بسيط، لكن سنرسل لك رابط المكافأة فور توفرها.<br><br>
+               <a href="https://t.me/+f7gWYIe0IyoyNzY1" target="_blank"><img src="vip_telegram.png"
+                     style="width: 300px;"></a>
+            </p>
+         </div>
+      </li>
+
+      <li class="container btnContainer">
+         <div class="row collapsible-header titreCollapse">
+            <div class="col s2">
+               <img src="monthly_img.svg" class="imgLeft">
+            </div>
+            <div class="col s10 s10Right">
+               مكافأة شهرية&nbsp;&nbsp;&nbsp;&nbsp;<img src="bonus.svg" style="vertical-align: middle;"><i
+                  class="material-icons imgDroite">chevron_right</i>
+            </div>
+         </div>
+         <div style="background-color:#101B22" class="collapsible-body text">
+            <p>للاستفادة من المكافأة الشهرية، يجب أن يكون لديك حساب مفعل في Stake، وأن يكون بريدك الإلكتروني مؤكد.<br><br>
+
+               المكافأة الشهرية هي مبلغ إضافي يُمنح لجميع اللاعبين المؤهلين مرة واحدة كل شهر.<br><br>
+
+               لا توجد شروط صعبة بخصوص الإيداع أو الرهان — يكفي أن تكون لاعباً نشطاً.<br><br>
+
+               <img src="monthly.png" style="width: 304;"><br><br>
+
+               مثل المكافأة الأسبوعية، سنرسل لك رابط المكافأة الشهرية. يمكنك أيضاً العثور عليه في بريدك الإلكتروني أو على قناة Stake الرسمية على تليجرام.<br><br>
+               <a href="https://t.me/+f7gWYIe0IyoyNzY1" target="_blank"><img src="vip_telegram.png"
+                     style="width: 300px;"></a>
+            </p>
+         </div>
+      </li>
+
+      <li class="container btnContainer">
+         <div class="row collapsible-header titreCollapse">
+            <div class="col s2">
+               <img src="defis_img.svg" class="imgLeft">
+            </div>
+            <div class="col s10 s10Right">
+               التحديات&nbsp;&nbsp;&nbsp;&nbsp;<img src="bonus.svg" style="vertical-align: middle;"><i
+                  class="material-icons imgDroite">chevron_right</i>
+            </div>
+         </div>
+         <div style="background-color:#101B22" class="collapsible-body text">
+            <p>التحديات في Stake يتم إنشاؤها من قبل الستريمر الخاص بك.<br><br>
+               وهي تتعلق بتحقيق هدف معين في لعبة أو وضع محدد.<br><br>
+
+               <img src="defis.png" style="width: 304;"><br><br>
+
+               <b>مثال:</b> التحدي هو الوصول إلى مضاعف ×1000 في لعبة Plinko. أول لاعب يحقق ذلك بعد بدء التحدي يفوز بالجائزة النقدية المحددة.
+            </p>
+         </div>
+      </li>
+
+      <li class="container btnContainer">
+         <div class="row collapsible-header titreCollapse">
+            <div class="col s2">
+               <img src="code_img.svg" class="imgLeft">
+            </div>
+            <div class="col s10 s10Right">
+               الأكواد&nbsp;&nbsp;&nbsp;&nbsp;<img src="bonus.svg" style="vertical-align: middle;"><i
+                  class="material-icons imgDroite">chevron_right</i>
+            </div>
+         </div>
+         <div style="background-color:#101B22" class="collapsible-body text">
+            <p>يتم توزيع أكواد Stake من قبل <b>الشركاء مباشرة</b> على <b>بثوثهم المباشرة أو على وسائل التواصل الاجتماعي.</b><br><br>
+
+               هذه الأكواد صالحة <b>لمرة واحدة فقط</b> ولها عدد استخدامات محدود.<br><br>
+
+               <a href="https://stake.bet/fr/settings/offers" target="_blank"><img src="code_drop.png"
+                     style="width: 300px;"></a><br><br>
+
+               <img src="code.png" style="width: 304;">
+            </p>
+         </div>
+      </li>
+
+      <li class="container btnContainer">
+         <div class="row collapsible-header titreCollapse">
+            <div class="col s2">
+               <img src="tombola_img.svg" class="imgLeft">
+            </div>
+            <div class="col s10 s10Right">
+               سحب أسبوعي<i class="material-icons imgDroite">chevron_right</i>
+            </div>
+         </div>
+         <div style="background-color:#101B22" class="collapsible-body text">
+            <p>كل أسبوع، شارك في سحبنا الأسبوعي لمحاولة الفوز بجزء من جائزة قدرها 75,000 دولار.<br><br>
+
+لكل 1,000 دولار تراهن بها في الكازينو أو الرهانات الرياضية، ستحصل تلقائياً على تذكرة للسحب الأسبوعي في Stake.<br><br>
+
+يتم الإعلان عن الفائزين مباشرة على بث إيدي كل يوم سبت الساعة 14:00 (بتوقيت GMT).<br><br>
+
+<img src="tombola.png" style="width: 304;">
+            </p>
+         </div>
+      </li>
+
+      <li class="container btnContainer">
+         <div class="row collapsible-header titreCollapse">
+            <div class="col s2">
+               <img src="condition_img.svg" class="imgLeft">
+            </div>
+            <div class="col s10 s10Right">
+               الشروط<i class="material-icons imgDroite">chevron_right</i>
+            </div>
+         </div>
+         <div style="background-color:#101B22" class="collapsible-body text">
+            <p>لتكون مؤهلاً للحصول على عروض الترحيب في Stake، يجب أن يكون حسابك مرتبطاً بشريكك وأن تكون دون مستوى البرونز. إذا تم استيفاء جميع الشروط، يرجى التواصل مع البوت هنا لبدء العملية!</p>
+         </div>
+      </li>
+
+   </ul>
+
+</body>
+
+</html>
