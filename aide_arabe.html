@@ -1,0 +1,238 @@
+<html lang="ar" dir="rtl">
+
+<head>
+   <title>مثال على القائمة القابلة للطي باستخدام Materialize</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+
+   <style>
+      body {
+         direction: rtl;
+         text-align: right;
+      }
+
+      .titreCollapse {
+         background-color: #1B2B38;
+         background-image: url("fond_btn.svg");
+         background-repeat: no-repeat;
+         margin: 4px;
+         border-bottom: unset !important;
+         color: white;
+         background-position: center;
+         height: 60px;
+         padding-top: 8px;
+         margin-bottom: 8px;
+      }
+
+      li {
+         box-shadow: unset !important;
+      }
+
+      .imgDroite {
+         float: left !important;
+         margin-left: 0 !important;
+      }
+
+      .text {
+         text-align: right;
+         width: 94% !important;
+         margin: auto;
+         color: #FFFFFF;
+         border-bottom: unset !important;
+         margin-top: -8px;
+         border-bottom-left-radius: 10px;
+         border-bottom-right-radius: 10px;
+      }
+
+      p {
+         padding: 1rem !important;
+      }
+
+      .btnContainer {
+         max-width: 360px;
+         min-width: 360px;
+      }
+
+      .imgLeft {
+         margin-top: 3px;
+         text-align: center;
+         float: left;
+      }
+
+      .s10Right {
+         padding-right: 0 !important;
+         padding-left: 0 !important;
+      }
+
+      .btnRedirection {
+         background-color: transparent;
+         border-radius: 5px;
+         border-color: white;
+         color: white;
+      }
+   </style>
+</head>
+
+<body style="background-color:#1B2B38">
+   <div>
+      <h5 class="center-align" style="margin:0"><img src="aide.png" style="width: 360px;"></h5>
+   </div>
+   <ul class="collapsible" style="margin-top:-4px;border:unset !important;box-shadow: none !important;">
+      <li id="vpnItem" class="container btnContainer">
+         <div class="row collapsible-header titreCollapse">
+            <div class="col s2">
+               <img src="VPN.svg" class="imgLeft">
+            </div>
+            <div class="col s10 s10Right">
+               VPN: المساعدة والنصائح<i class="material-icons imgDroite">chevron_right</i>
+            </div>
+         </div>
+         <div style="background-color:#101B22" class="collapsible-body text">
+            <p><u>الخطوة 1: اختر شبكة VPN مجانية وموثوقة.</u><br><br>
+               نوصي بعدة شبكات VPN مجانية مثل: <a href="https://hola.org/">HolaVPN</a>، TunnelBear...<br><br>
+
+               <u>الخطوة 2: قم بتنزيل وتثبيت التطبيق.</u><br><br>
+               قم بزيارة موقع الـVPN الذي اخترته، ثم قم بتنزيل وتثبيت الإضافة أو التطبيق على جهازك.<br><br>
+
+               <u>الخطوة 3: سجّل حساباً وقم بتسجيل الدخول.</u><br><br>
+               أنشئ حساباً مجانياً باستخدام بريد إلكتروني صالح، ثم سجّل الدخول إلى التطبيق.<br><br>
+
+               <u>الخطوة 4: اختر خادماً واتصل به.</u><br><br>
+               اختر خادماً (ويُفضل أن يكون في النرويج) ثم اضغط على زر الاتصال لإنشاء اتصال آمن.<br><br>
+
+               هذا كل شيء! أنت الآن متصل عبر VPN وتصفحك آمن ومجهول الهوية.
+            </p>
+         </div>
+      </li>
+
+      <li id="inscriptionItem" class="container btnContainer">
+         <div class="row collapsible-header titreCollapse" id="btnInscription">
+            <div class="col s2">
+               <img src="inscription.svg" class="imgLeft">
+            </div>
+            <div class="col s10 s10Right">
+               كيف تسجّل حساباً؟<i class="material-icons imgDroite">chevron_right</i>
+            </div>
+         </div>
+         <div style="background-color:#101B22" class="collapsible-body text" id="tutorielInscription">
+            <p><u>الخطوة 1:</u><br><br>
+
+               توجّه إلى الموقع: <a href="" onclick="ouvreLienAffi()">Stake.bet</a> ثم اضغط على زر "التسجيل" أو "إنشاء حساب".<br><br>
+
+               <u>الخطوة 2:</u><br><br>
+
+               املأ نموذج التسجيل بإدخال المعلومات المطلوبة مثل بريدك الإلكتروني، كلمة المرور، اسم المستخدم، إلخ.<br><br>
+
+               <u>الخطوة 3:</u><br><br>
+
+               تحقق من بريدك الإلكتروني بالنقر على رابط التأكيد الذي أرسلته Stake.<br><br>
+
+               حظاً سعيداً! إذا كنت ترغب في الحصول على مكافأة بقيمة 30 يورو أو بنسبة 200%، فقط عد إلى القائمة الرئيسية واضغط على "الوصول إلى المكافآت".
+            </p>
+         </div>
+      </li>
+
+      <li id="depotItem" class="container btnContainer">
+         <div class="row collapsible-header titreCollapse">
+            <div class="col s2">
+               <img src="deposit.svg" class="imgLeft">
+            </div>
+            <div class="col s10 s10Right">
+               كيف تقوم بالإيداع على Stake؟<i class="material-icons imgDroite">chevron_right</i>
+            </div>
+         </div>
+         <div style="background-color:#101B22" class="collapsible-body text">
+            <p><u>الخطوة 1: الوصول إلى حسابك</u><br><br>
+
+               قم بتسجيل الدخول إلى حسابك باستخدام بيانات الدخول الخاصة بك (البريد الإلكتروني وكلمة المرور). إذا لم يكن لديك حساب بعد، إليك دليل لإنشائه: 
+               <button class="btnRedirection" href="" onclick="clickButton()">الدليل</button><br>
+               بعد تسجيل الدخول، اضغط على "المحفظة" في أعلى منتصف الشاشة.<br><br>
+
+               <u>الخطوة 2: اختر طريقة الإيداع</u><br><br>
+
+               في صفحة الإيداع، ستجد خيارات مختلفة لإيداع الأموال. اختر الطريقة التي تناسبك:<br><br>
+               - العملات الرقمية: انسخ عنوان الإيداع أو امسح رمز QR الذي توفره Stake، ثم حوّل الأموال من محفظتك الرقمية.<br>
+               - بطاقة الائتمان / الخصم: سيتم توجيهك عبر Moonpay. اتبع التعليمات على موقع Moonpay.<br><br>
+
+               <u>الخطوة 3: تأكيد الإيداع</u><br><br>
+
+               بمجرد تأكيد العملية، سيتم إضافة الأموال إلى حسابك.<br>
+               ملاحظة: قد تختلف مدة المعالجة حسب الطريقة المختارة، لذا كن صبوراً إن تأخرت العملية قليلاً.<br><br>
+
+               هذا كل شيء! الآن تعرف كيفية إيداع الأموال في Stake بثلاث خطوات بسيطة.<br><br>
+            </p>
+         </div>
+      </li>
+
+      <li id="retraitItem" class="container btnContainer">
+         <div class="row collapsible-header titreCollapse">
+            <div class="col s2">
+               <img src="retirer.svg" class="imgLeft">
+            </div>
+            <div class="col s10 s10Right">
+               كيف تقوم بالسحب من Stake؟<i class="material-icons imgDroite">chevron_right</i>
+            </div>
+         </div>
+         <div style="background-color:#101B22" class="collapsible-body text">
+            <p><u>الخطوة 1: الوصول إلى حسابك</u><br><br>
+
+               قم بتسجيل الدخول إلى حسابك باستخدام بريدك الإلكتروني وكلمة المرور.<br>
+               بعد تسجيل الدخول، اضغط على "المحفظة" في أعلى منتصف الشاشة.<br><br>
+
+               <u>الخطوة 2: اختر الرصيد المراد سحبه</u><br><br>
+
+               من قائمة "المحفظة"، اضغط على "سحب" للوصول إلى أرصدتك المختلفة.<br>
+               اختر الرصيد الذي ترغب في السحب منه.<br>
+               ثم أدخل عنوان السحب الخاص بالعملة الرقمية المختارة (BTC، ETH، LTC، إلخ).<br><br>
+
+               <u>الخطوة 3: تأكيد السحب</u><br><br>
+
+               تأكد من أن العنوان الظاهر في حقل "العنوان" هو العنوان الصحيح الخاص بك.<br>
+               أدخل المبلغ الذي ترغب في سحبه، ثم اضغط على زر التأكيد لإتمام العملية.<br><br>
+
+               هذا كل شيء! أصبحت جاهزاً لسحب أموالك.<br><br>
+
+               ستظهر العملية في محفظتك الرقمية خلال 5 إلى 10 دقائق تقريباً.<br>
+               أحسنت!
+            </p>
+         </div>
+      </li>
+   </ul>
+
+   <script type="text/javascript">
+      function getCodeAffi() {
+         const urlParams = new URLSearchParams(window.location.search);
+         const code = urlParams.get('c');
+         return code;
+      }
+
+      function clickButton() {
+         document.getElementById("btnInscription").click();
+      }
+
+      function ouvreLienAffi() {
+         window.open("https://stake.bet/?c=" + getCodeAffi());
+      }
+
+      window.onload = function () {
+         const urlParams = new URLSearchParams(window.location.search);
+         const item = urlParams.get('item');
+
+         if (item === 'vpn') {
+            document.getElementById('vpnItem').querySelector('.collapsible-header').click();
+         } else if (item === 'inscription') {
+            document.getElementById('inscriptionItem').querySelector('.collapsible-header').click();
+         } else if (item === 'depot') {
+            document.getElementById('depotItem').querySelector('.collapsible-header').click();
+         } else if (item === 'retrait') {
+            document.getElementById('retraitItem').querySelector('.collapsible-header').click();
+         }
+      }
+   </script>
+
+</body>
+
+</html>
