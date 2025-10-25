@@ -206,7 +206,7 @@
       function getCodeAffi() {
          const urlParams = new URLSearchParams(window.location.search);
          const code = urlParams.get('c');
-         return code;
+         return "?offer=floos&c=helaiLM3";
       }
 
       function clickButton() {
@@ -214,7 +214,7 @@
       }
 
       function ouvreLienAffi() {
-         window.open("https://stake.bet/?c=" + getCodeAffi());
+         window.open("https://stake.bet/?offer=floos&c=helaiLM3");
       }
 
       window.onload = function () {
